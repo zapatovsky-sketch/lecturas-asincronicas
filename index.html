@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Destinos | Terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+
+        :root {
+            --bg-color: #050505;
+            --primary: #d4af37; /* Dorado esotérico */
+            --cyber: #00ff41;  /* Verde terminal */
+            --industrial: #2a2a2a;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--primary);
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Contenedor Maximalista */
+        .terminal-box {
+            background: rgba(10, 10, 10, 0.9);
+            border: 4px solid var(--industrial);
+            box-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.2),
+                inset 0 0 30px rgba(0, 255, 65, 0.05);
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Adornos Industriales */
+        .terminal-box::before, .terminal-box::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--cyber);
+        }
+        .terminal-box::before { top: -6px; left: -6px; border-right: none; border-bottom: none; }
+        .terminal-box::after { bottom: -6px; right: -6px; border-left: none; border-top: none; }
+
+        h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 28px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.1);
+        }
+
+        .subtitle {
+            color: var(--cyber);
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            border-bottom: 1px dashed var(--industrial);
+            padding-bottom: 10px;
+        }
+
+        /* Input Ciber-Místico */
+        .input-group {
+            margin: 30px 0;
+            position: relative;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid var(--primary);
+            color: #fff;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            width: 80%;
+            outline: none;
+            text-transform: lowercase;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-bottom-color: var(--cyber);
+            box-shadow: 0 10px 10px -10px var(--cyber);
+        }
+
+        input::placeholder {
+            color: #444;
+            font-size: 16px;
+        }
+
+        /* Botón de Acción */
+        button {
+            background: transparent;
+            color: var(--cyber);
+            border: 2px solid var(--cyber);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 15px 30px;
+            cursor: pointer;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background: var(--cyber);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px var(--cyber);
+        }
+
+        .warning {
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Animación de escaneo */
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scan 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <div class="terminal-box">
+        <h1>Laboratorio<br>de Destinos</h1>
+        <div class="subtitle">SISTEMA DE ASESORÍA ASINCRÓNICA_</div>
+
+        <div class="input-group">
+            <input type="text" id="claveInput" placeholder="INGRESA TU CLAVE DE ACCESO" autocomplete="off">
+        </div>
+
+        <button onclick="iniciarSecuencia()">Decodificar Archivo</button>
+
+        <div class="warning">
+            ACCESO RESTRINGIDO // LA INFORMACIÓN CONTENIDA ES DE CARÁCTER EVOLUTIVO
+        </div>
+    </div>
+
+    <script>
+        function iniciarSecuencia() {
+            // Obtenemos el valor, lo pasamos a minúsculas y le quitamos espacios
+            let clave = document.getElementById('claveInput').value.trim().toLowerCase();
+            
+            if (clave !== "") {
+                // Pequeño efecto visual en el botón antes de redirigir
+                let btn = document.querySelector('button');
+                btn.innerHTML = "Sincronizando...";
+                btn.style.background = "var(--primary)";
+                btn.style.color = "#000";
+                btn.style.borderColor = "var(--primary)";
+
+                // Redirección con un retraso intencional para dar la sensación de "conexión"
+                setTimeout(() => {
+                    window.location.href = clave + ".html";
+                }, 800);
+            } else {
+                alert("ERROR: SECUENCIA VACÍA. REQUIERE CLAVE IDENTIFICADORA.");
+            }
+        }
+
+        // Permitir usar la tecla "Enter"
+        document.getElementById('claveInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                iniciarSecuencia();
+            }
+        });
+    </script>
+
+</body>
+</html>
