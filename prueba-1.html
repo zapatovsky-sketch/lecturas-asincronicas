@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Destinos - Zapatovsky!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'barroco-bg': '#0a0c0b',
+                        'barroco-panel': '#141715',
+                        'barroco-gold': '#c5a059',
+                        'barroco-emerald': '#064e3b',
+                        'barroco-ink': '#1a1a1a',
+                        'barroco-marmol': '#e5e7eb',
+                        'psico-bg': '#0f172a',
+                        'psico-accent': '#f472b6',
+                        'psico-vibrant': '#8b5cf6',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Lora', 'serif'],
+                        'modern': ['Inter', 'sans-serif'],
+                        'accent': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(197, 160, 89, 0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(197, 160, 89, 0.6)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0c0b; }
+        ::-webkit-scrollbar-thumb { background: #c5a059; border-radius: 10px; }
+
+        body {
+            background-color: #0a0c0b;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(20, 23, 21, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(10, 12, 11, 0) 0%, rgba(10, 12, 11, 0.9) 80%, #0a0c0b 100%);
+        }
+
+        .chiaroscuro-img img {
+            filter: brightness(0.7) contrast(1.1) sepia(0.2);
+            transition: all 1s ease;
+        }
+        
+        .chiaroscuro-img:hover img {
+            filter: brightness(0.9) contrast(1.2) sepia(0.1);
+        }
+
+        /* Custom Audio Player Styling */
+        .audio-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+            width: 320px;
+        }
+
+        @media (max-width: 640px) {
+            .audio-container {
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                width: auto;
+            }
+        }
+
+        .custom-audio-player {
+            background: rgba(20, 23, 21, 0.95);
+            border: 1px solid #c5a059;
+            padding: 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        audio {
+            height: 30px;
+            width: 100%;
+            filter: invert(100%) sepia(100%) saturate(500%) hue-rotate(10deg) brightness(80%);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c5a059, transparent);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-barroco-gold selection:text-black">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 py-6 px-8 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 border border-barroco-gold rotate-45 flex items-center justify-center">
+                <div class="w-2 h-2 bg-barroco-gold"></div>
+            </div>
+            <h1 class="font-accent text-xs tracking-[0.4em] uppercase text-barroco-gold/80">Laboratorio de Destinos</h1>
+        </div>
+        <div class="text-[10px] font-modern uppercase tracking-widest text-white/40">Reporte No. 042-Z</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 chiaroscuro-img">
+            <div class="absolute inset-0 hero-gradient z-10"></div>
+            <div class="w-full h-full">
+                <img src='https://opal.google/board/blobs/fdd00418-d784-4701-bd0e-e92db111f8ba' alt='materialize_vision_image' class="w-full h-full object-cover" />
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 container mx-auto px-6 text-center lg:text-left flex flex-col lg:flex-row items-center lg:items-end justify-between gap-12">
+            <div class="animate-fade-in space-y-4 max-w-2xl">
+                <div class="inline-block px-3 py-1 border border-barroco-gold/40 rounded-full text-[10px] font-accent uppercase tracking-widest text-barroco-gold mb-2">
+                    Vibra Personal: Barroco Oscuro
+                </div>
+                <h2 class="text-6xl md:text-8xl font-display text-white italic">Zapatovsky!</h2>
+                <div class="space-y-2">
+                    <p class="text-sm font-modern tracking-[0.2em] text-barroco-gold uppercase">Consulta:</p>
+                    <p class="text-xl md:text-2xl font-light italic text-white/90 leading-relaxed">"¿Hay algo que se me esté quedando en el tintero?"</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-sm animate-float max-w-md w-full border-l-4 border-l-barroco-gold">
+                <h3 class="font-accent text-[10px] tracking-widest uppercase text-barroco-gold/60 mb-6">Tirada de Arcanos</h3>
+                <ul class="space-y-4 text-sm font-modern tracking-wide">
+                    <li class="flex items-center gap-4">
+                        <span class="w-2 h-2 bg-barroco-gold rounded-full shadow-[0_0_8px_rgba(197,160,89,0.8)]"></span>
+                        <span class="text-white/80">Reyna de Espadas</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="w-2 h-2 bg-barroco-gold rounded-full shadow-[0_0_8px_rgba(197,160,89,0.8)]"></span>
+                        <span class="text-white/80">VII de Copas</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="w-2 h-2 bg-barroco-gold rounded-full shadow-[0_0_8px_rgba(197,160,89,0.8)]"></span>
+                        <span class="text-white/80">X de Copas</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-24 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- Left: Interpretation -->
+            <div class="lg:col-span-8 space-y-16">
+                <header class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-display italic text-barroco-gold">I. El Testamento de la Niebla</h2>
+                    <p class="text-sm font-modern text-white/40 tracking-widest uppercase">Interpretación Metafísica</p>
+                </header>
+
+                <div class="prose prose-invert prose-lg max-w-none space-y-12">
+                    <p class="text-xl leading-relaxed first-letter:text-6xl first-letter:font-display first-letter:text-barroco-gold first-letter:mr-3 first-letter:float-left">
+                        La atmósfera es espesa, cargada con el incienso ritual y el frío gélido de los bosques del sur de Chile. Lo que no se ha dicho, Zapatovsky!, no es un descuido fortuito, sino una reserva espiritual protegida por sombras y certezas gélidas.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                        <div class="space-y-4">
+                            <h4 class="font-accent text-xs uppercase tracking-widest text-barroco-gold">El Juicio</h4>
+                            <p class="text-white/70 leading-loose">
+                                <strong class="text-white">Reyna de Espadas</strong> preside con un intelecto afilado. Sugiere una poda rigurosa de lo superfluo. El "tintero" guarda una palabra gélida, una verdad necesaria que temes termine con una ambigüedad elegante pero agotadora. Exige entrar al bosque de la verdad sin rodeos.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-accent text-xs uppercase tracking-widest text-barroco-gold">El Espejismo</h4>
+                            <p class="text-white/70 leading-loose">
+                                <strong class="text-white">VII de Copas</strong> emerge como una exhalación de vapores alquímicos. Tu duda central es la multiplicidad de espejismos. Lo pendiente son las posibilidades no elegidas que rondan como fantasmas. Fantasías de poder, deseo y olvido que ocultan tu verdadero tesoro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-barroco-panel p-10 border border-white/5 relative overflow-hidden group">
+                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-barroco-emerald/10 rounded-full blur-3xl group-hover:bg-barroco-gold/10 transition-all duration-700"></div>
+                        <h3 class="text-3xl font-display italic mb-6">La Plenitud Silenciada</h3>
+                        <p class="text-white/80 leading-relaxed">
+                            <strong class="text-white font-serif">X de Copas</strong> se manifiesta con la solemnidad de un himno coral. Lo que realmente se está quedando atrás es la aceptación de una plenitud que ya te rodea. Tu obsesión intelectual por diseccionarlo todo (la Reina) te hace ignorar el reposo del guerrero y la comunión con tu entorno. Lo "no dicho" es el punto final de una narrativa solitaria: el permiso para ser feliz dentro de la estructura, encontrando lo sagrado en lo doméstico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Technical Data -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="glass-card p-8 border-t-2 border-t-barroco-gold">
+                        <h3 class="font-display italic text-2xl mb-8">II. Ficha Técnica</h3>
+                        
+                        <!-- Chromatic -->
+                        <div class="space-y-6 mb-12">
+                            <h4 class="font-accent text-[10px] tracking-[0.3em] uppercase text-barroco-gold/60 border-b border-white/10 pb-2">Frecuencias Cromáticas</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-xs font-modern">
+                                    <span>Blanco Marmóreo</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="w-full h-1 bg-white/10"><div class="h-full bg-white w-[60%]"></div></div>
+                                
+                                <div class="flex items-center justify-between text-xs font-modern">
+                                    <span>Verde Alerce Profundo</span>
+                                    <span>25%</span>
+                                </div>
+                                <div class="w-full h-1 bg-white/10"><div class="h-full bg-emerald-900 w-[25%]"></div></div>
+                                
+                                <div class="flex items-center justify-between text-xs font-modern">
+                                    <span>Gris Ceniza</span>
+                                    <span>10%</span>
+                                </div>
+                                <div class="w-full h-1 bg-white/10"><div class="h-full bg-gray-500 w-[10%]"></div></div>
+                                
+                                <div class="flex items-center justify-between text-xs font-modern">
+                                    <span>Oro Viejo</span>
+                                    <span>5%</span>
+                                </div>
+                                <div class="w-full h-1 bg-white/10"><div class="h-full bg-barroco-gold w-[5%] shadow-[0_0_10px_rgba(197,160,89,0.5)]"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- Numeric -->
+                        <div class="space-y-6 mb-12">
+                            <h4 class="font-accent text-[10px] tracking-[0.3em] uppercase text-barroco-gold/60 border-b border-white/10 pb-2">Sincronías Numéricas</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white/5 p-4 text-center">
+                                    <div class="text-2xl font-display text-barroco-gold">13</div>
+                                    <div class="text-[9px] uppercase tracking-tighter text-white/40">Corte Necesario</div>
+                                </div>
+                                <div class="bg-white/5 p-4 text-center">
+                                    <div class="text-2xl font-display text-barroco-gold">7</div>
+                                    <div class="text-[9px] uppercase tracking-tighter text-white/40">Caos Imaginario</div>
+                                </div>
+                                <div class="bg-white/5 p-4 text-center">
+                                    <div class="text-2xl font-display text-barroco-gold">10</div>
+                                    <div class="text-[9px] uppercase tracking-tighter text-white/40">Resolución</div>
+                                </div>
+                                <div class="bg-white/5 p-4 text-center border border-barroco-gold/30">
+                                    <div class="text-2xl font-display text-barroco-gold">3</div>
+                                    <div class="text-[9px] uppercase tracking-tighter text-white/40">Suma Teosófica</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sonic Specs -->
+                        <div class="space-y-4">
+                            <h4 class="font-accent text-[10px] tracking-[0.3em] uppercase text-barroco-gold/60 border-b border-white/10 pb-2">Frecuencias Sónicas</h4>
+                            <ul class="text-[11px] font-modern space-y-3 text-white/60 uppercase tracking-widest">
+                                <li class="flex gap-2"><span>•</span> Crujir de madera antigua</li>
+                                <li class="flex gap-2"><span>•</span> Goteo rítmico en cripta</li>
+                                <li class="flex gap-2"><span>•</span> Campana de plata distante</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Audio Player Section (Sticky/Fixed) -->
+    <div class="audio-container animate-fade-in" style="animation-delay: 1s;">
+        <div class="custom-audio-player shadow-2xl">
+            <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-barroco-gold flex items-center justify-center animate-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black"><path d="M6 3l15 9-15 9V3z"/></svg>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="text-[10px] font-accent uppercase tracking-widest text-barroco-gold mb-1">Sonic Frequency</div>
+                <audio controls>
+                    <source src='https://opal.google/board/blobs/c749ad57-a263-4eca-a95c-291c5d49b45c' type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Note / Experience Footer -->
+    <div class="container mx-auto px-6 pb-32">
+        <div class="section-divider"></div>
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+            <p class="font-display italic text-3xl text-white/50">"El tintero está rebosante de proyecciones irreales. Es hora de escribir la verdad."</p>
+            <div class="flex justify-center gap-8">
+                <div class="w-12 h-px bg-barroco-gold/30 self-center"></div>
+                <div class="text-[10px] font-accent uppercase tracking-[0.5em] text-barroco-gold">Destino Manifestado</div>
+                <div class="w-12 h-px bg-barroco-gold/30 self-center"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple entry animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section, main, aside, .glass-card').forEach(el => {
+                el.style.opacity = "0";
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
