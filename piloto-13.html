@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Destinos | Archivo: PILOTO-13</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #050505;
+            --primary: #d4af37; /* Dorado esotérico */
+            --cyber: #00ff41;  /* Verde terminal */
+            --industrial: #2a2a2a;
+            --text-light: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(rgba(0, 255, 65, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-light);
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .document-box {
+            background: rgba(10, 10, 10, 0.95);
+            border: 2px solid var(--industrial);
+            box-shadow: 
+                0 0 15px rgba(212, 175, 55, 0.1),
+                inset 0 0 20px rgba(0, 255, 65, 0.03);
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 700px;
+            position: relative;
+        }
+
+        /* Adornos de las esquinas */
+        .document-box::before, .document-box::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--cyber);
+        }
+        .document-box::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        .document-box::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+        .header {
+            border-bottom: 2px dashed var(--cyber);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .sys-text {
+            color: var(--cyber);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Syncopate', sans-serif;
+            color: var(--primary);
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: 'Syncopate', sans-serif;
+            color: var(--primary);
+            font-size: 16px;
+            margin-top: 40px;
+            border-left: 4px solid var(--cyber);
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--cyber);
+        }
+
+        .price-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid var(--cyber);
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        .cta-box p {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Animación de escaneo sutil */
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.15);
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: scan 6s linear infinite;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @keyframes scan {
+            0% { top: -10px; }
+            100% { top: 100vh; }
+        }
+
+        @media (max-width: 600px) {
+            .document-box { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <div class="document-box">
+        <div class="header">
+            <div class="sys-text">ESTADO: DESENCRIPTADO // PROTOCOLO INICIADO</div>
+            <h1>Bienvenido al Laboratorio de Destinos</h1>
+            <div class="sys-text">OPERADOR: PABLO CAMPOS (ZAPATOVSKY)</div>
+        </div>
+
+        <p>Si estás leyendo esto, es porque abriste la puerta. Hola, soy Pablo. Seguramente me conoces de antes, pero aquí adentro opero bajo la arquitectura del <span class="highlight">Laboratorio de Destinos</span>.</p>
+
+        <p>El mundo actual está saturado de ruido. Coordinar horarios para tener un momento de introspección se ha vuelto casi imposible. Por eso diseñé este sistema: la <strong>Asesoría Espiritual Asincrónica</strong>.</p>
+
+        <h2>¿QUÉ ES ESTE SISTEMA?</h2>
+        <p>Es la unión de la tecnología de bases de datos con la precisión evolutiva del Tarot de Marsella. No necesitamos estar conectados al mismo tiempo para que las respuestas lleguen. Tú ingresas tu inquietud al sistema, yo la proceso en mi laboratorio, y te entrego los resultados encriptados en este mismo portal.</p>
+        <p>Tú decides cuándo y dónde decodificar tu archivo para leerlo con la calma que merece.</p>
+
+        <h2>LA MECÁNICA OPERATIVA</h2>
+        <p>1. Me envías por Instagram la situación exacta que quieres observar.</p>
+        <p>2. Creas un <span class="highlight">Nombre Clave</span> (una sola palabra, solo letras. Ej: <i>Alquimia</i> o <i>CenizaLunar</i>).</p>
+        <p>3. En un plazo máximo de 6 horas, subo tu archivo al servidor.</p>
+        <p>4. Entras a la portada de este portal, escribes tu clave, y accedes a tu lectura detallada.</p>
+
+        <div class="price-box">
+            <h2 style="margin-top:0; border-left:none; text-align:center;">TRANSPARENCIA DE DATOS</h2>
+            <p>El valor de este servicio de acompañamiento es de <strong>$25.000 mensuales</strong>. Esto te asegura una lectura asincrónica de alta fidelidad cada semana (4 al mes), pagable vía transferencia o tarjeta.</p>
+            <p style="color: var(--primary); font-weight: bold;">Sin embargo, para ti, el primer protocolo de prueba es 100% GRATUITO.</p>
+            <p style="font-size: 14px; margin-bottom: 0;">Quiero que experimentes la fricción cero de este sistema antes de tomar cualquier decisión.</p>
+        </div>
+
+        <div class="cta-box">
+            <p><span class="highlight">> ACCIÓN REQUERIDA:</span> Si el sistema te resuena y quieres iniciar tu lectura de prueba hoy mismo, <strong>vuelve a nuestro chat de Instagram</strong>. Escríbeme tu <strong>Nombre Clave</strong> y la pregunta que quieres que ingrese al Laboratorio.</p>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; font-size: 12px; color: #666;">FIN DE LA TRANSMISIÓN_</p>
+    </div>
+
+</body>
+</html>
