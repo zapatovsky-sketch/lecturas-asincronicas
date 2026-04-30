@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: CABALLERO DE BASTOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0caballerobastos.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>CABALLERO DE BASTOS</h1>
+      <h2>El Incendio en Movimiento</h2>
+
+      <p>Si el <strong>Tres de Espadas</strong> era el frío metal de la cirugía, el <strong>Caballero de Bastos</strong> es el estallido de la combustión interna. Es el fuego que ha dejado de ser una fogata estática para convertirse en un vector de fuerza. No es solo energía; es <strong>dirección</strong>. Es el momento en que la idea abandona el laboratorio y sale a conquistar el territorio, quemando la duda a su paso.</p>
+
+      <h3>La Narrativa del Impulso Indomable</h3>
+      <p>El Caballero no cabalga: él <strong>es</strong> el galope. Su montura no toca el suelo porque su combustible no es la tierra, sino el deseo puro. En su mano, el basto no es un arma de guerra, sino un cetro de voluntad vegetal que florece mientras se agita. Representa esa urgencia creativa que te despierta a las tres de la mañana y te obliga a producir, esa saturación de vitalidad que no permite el reposo porque el reposo se siente como la muerte.</p>
+      <p>Es la fase "maximalista" de la existencia. Donde otros ven obstáculos, él ve leña para su fuego. Es el ímpetu del productor que se encierra a terminar un álbum en una semana, poseído por una frecuencia que solo él escucha. Es la confianza absoluta en el instinto, el movimiento que precede al pensamiento.</p>
+
+      <h3>Metáforas de la Velocidad Solar</h3>
+      <ul>
+        <li><strong>La Lanza de Helios:</strong> Es un rayo de sol que atraviesa la atmósfera. No pide permiso para iluminar o quemar; simplemente sucede. Es la fuerza centrífuga que expulsa al ser fuera de su zona de confort.</li>
+        <li><strong>El Viento de las Salamandras:</strong> El aire a su alrededor no es fresco, es una corriente térmica que eleva todo lo que encuentra. Su presencia altera el clima de cualquier habitación; donde llega, la temperatura emocional sube.</li>
+        <li><strong>La Migración del Fuego:</strong> El Caballero sabe que el fuego necesita oxígeno nuevo para no extinguirse. Por eso es el eterno viajero, el que se muda, el que cambia de proyecto, el que busca siempre la frontera donde lo conocido se termina.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>El Caballero de Bastos habita en quien ha decidido que el miedo es un lujo que no puede permitirse. Es la vibración de la adolescencia espiritual: audaz, impaciente, a veces imprudente, pero profundamente viva. Representa al emprendedor que lanza su proyecto antes de que sea "perfecto", al artista que se sube al escenario sin red, al amante que se declara sin esperar respuesta.</p>
+      <p>Su sombra es la transitoriedad —el riesgo de dejar incendios atrás sin quedarse a ver las cenizas—, pero su luz es la capacidad de transformar el deseo en destino a través del puro movimiento. En el Laboratorio, es el llamado a la acción inmediata: menos análisis, más ejecución.</p>
+
+      <blockquote>Resonancia: "No busques el camino; corre tan rápido que el camino tenga que aparecer bajo tus pies."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
