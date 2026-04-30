@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAB_DESTINOS: ESTADO DEL SISTEMA</title>
+    <title>LAB_DESTINOS: EVOLUCIÓN DEL SISTEMA</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
 
         :root {
             --bg-color: #050505;
             --primary: #d4af37;
-            --alert: #ff3333;
+            --cyber: #00ff41;
             --industrial: #2a2a2a;
         }
 
         body {
             background-color: var(--bg-color);
             background-image: 
-                linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+                linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
             color: #e0e0e0;
             font-family: 'Share Tech Mono', monospace;
@@ -34,63 +34,45 @@
             background: rgba(10, 10, 10, 0.98);
             border: 2px solid var(--industrial);
             box-shadow: 0 0 40px rgba(0, 0, 0, 1);
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             padding: 50px;
             position: relative;
             text-align: center;
         }
 
-        .status-box::before {
-            content: 'ALERTA DE CAPACIDAD';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--alert);
-            color: black;
-            padding: 2px 15px;
-            font-weight: bold;
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
-
         h1 {
             font-family: 'Syncopate', sans-serif;
             color: var(--primary);
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 30px;
             letter-spacing: 3px;
         }
 
-        .status-indicator {
-            font-size: 18px;
-            color: var(--alert);
-            border: 1px solid var(--alert);
+        .alert-text {
+            color: var(--cyber);
+            border: 1px solid var(--cyber);
             display: inline-block;
-            padding: 10px 30px;
-            margin: 20px 0;
-            background: rgba(255, 51, 51, 0.05);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            animation: pulse-border 2s infinite;
-        }
-
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0px var(--alert); }
-            50% { box-shadow: 0 0 15px var(--alert); }
-            100% { box-shadow: 0 0 0px var(--alert); }
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
         }
 
         p {
             font-size: 16px;
             line-height: 1.8;
             color: #aaa;
+            text-align: left;
         }
 
-        .highlight {
-            color: var(--primary);
-            font-weight: bold;
+        .highlight { color: var(--primary); font-weight: bold; }
+
+        .service-card {
+            border: 1px solid var(--industrial);
+            background: rgba(212, 175, 55, 0.05);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
         }
 
         .footer-sig {
@@ -99,20 +81,27 @@
             color: #444;
             border-top: 1px solid var(--industrial);
             padding-top: 20px;
-            text-transform: uppercase;
         }
+    </style>
+</head>
+<body>
+    <div class="status-box">
+        <div class="alert-text">PROTOCOLO PILOTO FINALIZADO // INICIANDO FASE 02</div>
+        <h1>EL LABORATORIO SE TRANSFORMA</h1>
+        
+        <p>Los cupos para lecturas asincrónicas personales han sido asignados. Sin embargo, el Laboratorio no se detiene; se expande hacia la <span class="highlight">Enciclopedia del Destino</span>.</p>
 
-        .btn-waitlist {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
+        <div class="service-card">
+            <h3 style="color:var(--primary); margin-top:0;">SERVICIO DE ARQUENIERÍA</h3>
+            <p style="font-size:14px;">¿Tienes un proyecto, marca o sistema que necesita una estructura mística y técnica? Estoy ofreciendo <strong>sesiones de consultoría para creadores</strong>. Diseñemos tu propia arquitectura de realidad.</p>
+            <p style="font-size:12px; color:var(--cyber);">> Contactar por DM para agenda de Arqueniero.</p>
+        </div>
 
-        .btn-waitlist:hover {
-            background: var(--primary);
-            color: black;
-            box-shadow:
+        <p>A partir de ahora, el portal es un <strong>Diccionario Vivo</strong>. Puedes probar ingresando conceptos como <span class="highlight">elpapa</span> o <span class="highlight">elmago</span>. Si ingresas una clave que el sistema aún no conoce, estarás ayudando a mapear el vacío.</p>
+
+        <div class="footer-sig">
+            LAB_DESTINOS // ESTADO: EXPANDIENDO // OPERADOR: PABLO CAMPOS
+        </div>
+    </div>
+</body>
+</html>
