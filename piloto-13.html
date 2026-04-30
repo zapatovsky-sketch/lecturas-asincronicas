@@ -63,14 +63,23 @@
             letter-spacing: 3px;
         }
 
-        .counter {
-            font-size: 48px;
+        .status-indicator {
+            font-size: 18px;
             color: var(--alert);
             border: 1px solid var(--alert);
             display: inline-block;
             padding: 10px 30px;
             margin: 20px 0;
             background: rgba(255, 51, 51, 0.05);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0px var(--alert); }
+            50% { box-shadow: 0 0 15px var(--alert); }
+            100% { box-shadow: 0 0 0px var(--alert); }
         }
 
         p {
@@ -106,29 +115,4 @@
         .btn-waitlist:hover {
             background: var(--primary);
             color: black;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="status-box">
-        <h1>SISTEMA SATURADO</h1>
-        
-        <div class="counter">20 / 20</div>
-        
-        <p>El <span class="highlight">Programa Piloto de Asesoría Asincrónica</span> ha alcanzado su límite de procesamiento de datos para este ciclo.</p>
-        
-        <p>Agradecemos a las unidades que confirmaron su frecuencia. En este momento, el Laboratorio de Destinos se encuentra operando exclusivamente en el despliegue de las lecturas activas.</p>
-
-        <p>Si deseas ser notificado cuando se abran nuevas vacantes o se libere un sector de consulta:</p>
-
-        <a href="https://www.instagram.com/tu_cuenta" class="btn-waitlist">REGISTRARSE EN LISTA DE ESPERA</a>
-
-        <div class="footer-sig">
-            LAB_DESTINOS // ESTADO: OVERLOAD // OPERADOR: ZAPATOVSKY
-        </div>
-    </div>
-
-</body>
-</html>
+            box-shadow:
