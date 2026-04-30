@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Destinos | Bella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@300;400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'baroque-gold': '#C5A059',
+                        'baroque-gold-dark': '#8E6E36',
+                        'deep-emerald': '#062C22',
+                        'oxblood': '#4A0E0E',
+                        'charcoal': '#121212',
+                        'marble-white': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Merriweather Sans', 'sans-serif'],
+                        accent: ['Cinzel', 'serif'],
+                    },
+                    animation: {
+                        'slow-pulse': 'slow-pulse 8s ease-in-out infinite',
+                        'fade-in': 'fade-in 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        'slow-pulse': {
+                            '0%, 100%': { opacity: 0.85, transform: 'scale(1)' },
+                            '50%': { opacity: 1, transform: 'scale(1.03)' },
+                        },
+                        'fade-in': {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #d1d1d1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to bottom, #E6C280, #C5A059, #8E6E36);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom, #C5A059, #4A0E0E) 1;
+        }
+        .custom-audio::-webkit-media-controls-panel {
+            background-color: #121212;
+        }
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-baroque-gold selection:text-charcoal">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 glass-panel border-b border-white/5">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 flex items-center justify-center border border-baroque-gold rotate-45">
+                <span class="font-accent text-baroque-gold -rotate-45 text-xs font-bold leading-none">LD</span>
+            </div>
+            <h1 class="font-accent tracking-[0.3em] text-sm md:text-base text-baroque-gold uppercase">Laboratorio de Destinos</h1>
+        </div>
+        <div class="hidden md:block">
+            <span class="text-[10px] uppercase tracking-widest text-white/40">Sessio: Barroco Oscuro</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <div class="absolute inset-0 hero-mask z-0">
+                <img src='https://opal.google/board/blobs/88b5617d-952c-413a-9cea-c0338cffca2d' alt='Visions of Destiny' class="w-full h-full object-cover animate-slow-pulse" />
+            </div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="relative z-20 container mx-auto px-6 text-center pt-24 pb-12">
+            <div class="inline-block px-4 py-1 mb-6 border border-baroque-gold/30 bg-black/40 backdrop-blur-sm rounded-full">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-baroque-gold">Destino Materializado para</span>
+            </div>
+            <h2 class="text-5xl md:text-8xl font-display font-bold text-white mb-4 animate-fade-in">Bella</h2>
+            <p class="max-w-2xl mx-auto text-baroque-gold-dark italic font-serif text-lg md:text-xl mb-12 animate-fade-in" style="animation-delay: 0.2s;">
+                "Un rayo de oscuridad ilumina desde la penumbra, desbordando un recinto floreado de alegría con cálidas notas de humanidad recobrada."
+            </p>
+
+            <!-- Quick Data Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-12 text-left">
+                <div class="glass-panel p-6 rounded-sm border-l-4 border-l-baroque-gold">
+                    <span class="block text-[10px] uppercase tracking-widest text-baroque-gold mb-2">Consulta</span>
+                    <p class="text-white text-sm leading-relaxed">Amor, en general, le he dado muchas vueltas a eso últimamente ¿o tiene que ser más específico?</p>
+                </div>
+                <div class="glass-panel p-6 rounded-sm border-l-4 border-l-oxblood">
+                    <span class="block text-[10px] uppercase tracking-widest text-baroque-gold mb-2">Arcanos Desplegados</span>
+                    <p class="text-white text-sm font-accent tracking-wider">Caballero de Oros, La Papisa, 3 de Oros, 4 de Bastos, Reina de Copas, El Papa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Report Content -->
+    <main class="container mx-auto px-6 py-20 relative">
+        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-12">
+            
+            <!-- Left Column: Interpretation -->
+            <article class="lg:w-2/3 space-y-12">
+                <div class="scroll-reveal">
+                    <h3 class="font-display text-3xl text-gradient-gold mb-8 flex items-center gap-4">
+                        <span class="h-px w-12 bg-baroque-gold/30"></span>
+                        La Interpretación
+                    </h3>
+                    <div class="prose prose-invert prose-lg max-w-none text-white/80 leading-relaxed space-y-6">
+                        <p>
+                            Bella, tu consulta sobre el amor se despliega en un escenario de arquitectura interna solemne. Tu <span class="text-baroque-gold">vibra personal</span> —esa luz que nace de la penumbra— resuena profundamente con la estética del <strong>Barroco Oscuro</strong>. No estamos ante un amor ligero o superficial, sino ante una construcción de mármol negro y oro viejo, envuelta en incienso y ecos de una fe recuperada.
+                        </p>
+                        <p>
+                            El viaje comienza con el <strong class="text-white">Caballero de Oros</strong>. Este arcano indica que el progreso ha sido lento pero inquebrantable. Has estado construyendo los cimientos tangibles de tu vida emocional con una diligencia admirable. No hay prisa cuando se busca la eternidad.
+                        </p>
+                        <p>
+                            <strong class="text-white">La Papisa</strong> aguarda en el umbral de las sombras. Ella te pide silencio. Las respuestas que buscas no están en el ruido externo ni en las preguntas que lanzas al aire, sino en la intuición. Es ese "rayo de oscuridad" el que te permitirá ver lo que otros ignoran: la verdad oculta tras el velo.
+                        </p>
+                        <div class="my-10 p-8 bg-gradient-to-br from-charcoal to-deep-emerald/30 border border-white/10 rounded-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <svg class="w-24 h-24 text-baroque-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"/></svg>
+                            </div>
+                            <p class="relative z-10 italic text-xl font-display text-white">
+                                "El amor no es solo un sentimiento, es una maestría técnica del alma."
+                            </p>
+                        </div>
+                        <p>
+                            El <strong class="text-white">3 de Oros</strong> nos habla de esa maestría. Estás puliendo tu capacidad de entrega, trabajando en equipo con el destino para perfeccionar tu corazón. Esta labor culmina en el <strong class="text-white">4 de Bastos</strong>: el recinto floreado de alegría. Es la estabilidad sagrada, un espacio de celebración construido sobre tierra firme y voluntad.
+                        </p>
+                        <p>
+                            Tu esencia en este proceso es la <strong class="text-white">Reina de Copas</strong>. Eres un cáliz de humanidad recobrada, capaz de contener océanos de afecto sin desbordarte. Esta madurez emocional es finalmente validada por <strong class="text-white">El Papa</strong>, quien otorga propósito y compromiso tradicional. El amor, para ti, se manifiesta como un pacto; un ritual de unión que eleva la arquitectura que has construido hacia lo divino.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right Column: Ficha Técnica & Audio -->
+            <aside class="lg:w-1/3 space-y-8">
+                <!-- Ficha Técnica -->
+                <div class="glass-panel p-8 rounded-sm scroll-reveal">
+                    <h4 class="font-accent text-sm tracking-widest text-baroque-gold mb-6 border-b border-baroque-gold/20 pb-2">FICHA TÉCNICA</h4>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <span class="block text-[10px] uppercase text-white/40 mb-3 tracking-tighter">Frecuencias Cromáticas</span>
+                            <div class="flex gap-2">
+                                <div class="w-8 h-8 rounded-full bg-black border border-white/20" title="Negro Absoluto"></div>
+                                <div class="w-8 h-8 rounded-full bg-[#4A0E0E] border border-white/20" title="Carmesí Aterciopelado"></div>
+                                <div class="w-8 h-8 rounded-full bg-[#8E6E36] border border-white/20" title="Oro Viejo"></div>
+                                <div class="w-8 h-8 rounded-full bg-[#4A4A4A] border border-white/20" title="Gris Ceniza"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="block text-[10px] uppercase text-white/40 mb-2">Frecuencias Numéricas</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">2</span>
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">3</span>
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">4</span>
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">5</span>
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">12</span>
+                                <span class="bg-white/5 px-2 py-1 text-xs border border-white/10 text-baroque-gold">13</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="block text-[10px] uppercase text-white/40 mb-2">Frecuencias Sónicas</span>
+                            <ul class="text-[11px] text-white/60 space-y-2 italic">
+                                <li>• Drone de órgano de tubos (30-60Hz)</li>
+                                <li>• Susurros corales en latín</li>
+                                <li>• Goteo de agua sobre piedra</li>
+                                <li>• Metal de armadura arrodillándose</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Player Panel -->
+                <div class="glass-panel p-8 rounded-sm scroll-reveal border-t-4 border-t-baroque-gold">
+                    <h4 class="font-accent text-sm tracking-widest text-white mb-4">ATMÓSFERA SÓNICA</h4>
+                    <p class="text-[11px] text-white/50 mb-6 leading-relaxed">
+                        Neoclásico ambiental: Humanidad recobrada. Siente el mazo golpeando la piedra y el ascenso hacia el clímax de violines.
+                    </p>
+                    <div class="bg-black/50 p-4 rounded-lg">
+                        <audio src='https://opal.google/board/blobs/bed896e3-8068-488b-af89-28dab227d6dd' controls class="w-full custom-audio"></audio>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Floating Audio Mini-Player (Mobile) -->
+    <div class="md:hidden fixed bottom-6 right-6 z-[100]">
+        <button onclick="document.querySelector('audio').play()" class="w-14 h-14 bg-baroque-gold text-charcoal rounded-full shadow-2xl flex items-center justify-center animate-pulse">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+    </div>
+
+    <!-- Final Decorative Element -->
+    <div class="w-full flex justify-center py-20 opacity-20">
+        <div class="w-24 h-px bg-baroque-gold"></div>
+        <div class="mx-4 text-baroque-gold font-accent text-xl">♦</div>
+        <div class="w-24 h-px bg-baroque-gold"></div>
+    </div>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Subtle parallax effect on hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('.animate-slow-pulse');
+            if (heroImg) {
+                heroImg.style.transform = `scale(${1 + scrolled * 0.0003}) translateY(${scrolled * 0.1}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
+
