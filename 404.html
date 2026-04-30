@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA: ERROR DE DECODIFICACIÓN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+
+        :root {
+            --bg-color: #0a0000; /* Un rojo muy oscuro para denotar error */
+            --error-red: #ff0000;
+            --primary: #d4af37;
+            --industrial: #2a2a2a;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--error-red);
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .error-container {
+            border: 2px solid var(--error-red);
+            padding: 40px;
+            background: rgba(255, 0, 0, 0.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            max-width: 500px;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 32px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: blink 0.8s infinite;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .glitch-text {
+            font-weight: bold;
+            color: var(--error-red);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 10px 20px;
+            font-family: 'Share Tech Mono', monospace;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: var(--primary);
+            color: black;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0.1; }
+        }
+
+        /* Ruido estático de fondo */
+        .noise {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://media.giphy.com/media/oEI9uWUicKgR6/giphy.gif');
+            opacity: 0.03;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="error-container">
+        <h1>ERROR 404</h1>
+        <span class="glitch-text">[ ARCHIVO NO ENCONTRADO EN EL SECTOR ]</span>
+        <p>La llave ingresada no coincide con ningún registro activo en el Laboratorio de Destinos. Es posible que el archivo aún se esté procesando o que la secuencia sea incorrecta.</p>
+        
+        <p style="font-size: 14px; color: #666;">REVISA MINÚSCULAS Y ESPACIOS_</p>
+        
+        <button onclick="window.location.href='index.html'">Reintentar Secuencia</button>
+    </div>
+</body>
+</html>
