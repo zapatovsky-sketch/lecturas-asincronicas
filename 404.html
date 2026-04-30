@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
 
         :root {
-            --bg-color: #0a0000; /* Un rojo muy oscuro para denotar error */
+            --bg-color: #0a0000;
             --error-red: #ff0000;
             --primary: #d4af37;
             --industrial: #2a2a2a;
@@ -34,6 +34,7 @@
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
             max-width: 500px;
             position: relative;
+            animation: shake 0.8s infinite;
         }
 
         h1 {
@@ -81,6 +82,15 @@
             50%, 100% { opacity: 0.1; }
         }
 
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            20% { transform: translate(-1px, -2px) rotate(-1deg); }
+            40% { transform: translate(-3px, 0px) rotate(1deg); }
+            60% { transform: translate(3px, 2px) rotate(0deg); }
+            80% { transform: translate(1px, -1px) rotate(1deg); }
+            100% { transform: translate(-1px, 2px) rotate(-1deg); }
+        }
+
         /* Ruido estático de fondo */
         .noise {
             position: fixed;
@@ -88,6 +98,12 @@
             background: url('https://media.giphy.com/media/oEI9uWUicKgR6/giphy.gif');
             opacity: 0.03;
             pointer-events: none;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #444;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -101,6 +117,21 @@
         <p style="font-size: 14px; color: #666;">REVISA MINÚSCULAS Y ESPACIOS_</p>
         
         <button onclick="window.location.href='index.html'">Reintentar Secuencia</button>
+        <div class="footer">LAB_DESTINOS // ERROR: TU SECUENCIA NO ES DIGNA</div>
     </div>
+
+    <script>
+        const mensajes = [
+            "[ ARCHIVO NO ENCONTRADO EN EL SECTOR ]",
+            "[ EL SISTEMA SE RÍE DE TI ]",
+            "[ SECUENCIA INVALIDA: VUELVE A INTENTARLO ]",
+            "[ EL PORTAL NO RECONOCE TU CLAVE ]"
+        ];
+        let i = 0;
+        setInterval(() => {
+            document.querySelector(".glitch-text").textContent = mensajes[i % mensajes.length];
+            i++;
+        }, 3000);
+    </script>
 </body>
 </html>
