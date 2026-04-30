@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: EL PAPA (V)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+
+    :root {
+      --bg-color: #050505;
+      --primary: #d4af37; /* Dorado Papa */
+      --accent: #5dace2;  /* Azul espiritual */
+      --industrial: #2a2a2a;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: #e0e0e0;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    .arcano-card {
+      position: relative;
+      background: rgba(10, 10, 10, 0.9);
+      border: 3px solid var(--industrial);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    /* Fondo velado con la carta */
+    .arcano-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("0elpapa.html") no-repeat center center;
+      background-size: cover;
+      opacity: 0.12;
+      filter: blur(8px) saturate(1.2);
+      z-index: 0;
+    }
+
+    .arcano-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 1px double var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .number {
+      font-size: 14px;
+      color: var(--accent);
+      letter-spacing: 5px;
+    }
+
+    h1 {
+      font-family: 'Syncopate', sans-serif;
+      color: var(--primary);
+      font-size: 32px;
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+
+    .content {
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .keyword {
+      color: var(--accent);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .footer-info {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+      border-top: 1px solid var(--industrial);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <div class="header">
+        <div class="number">ARCANO V</div>
+        <h1>EL PAPA</h1>
+        <div class="number">PUENTE DE COMUNICACIÓN</div>
+      </div>
+
+      <div class="content">
+        <p>En el Laboratorio, <span class="keyword">El Papa</span> es el **Protocolo de Transmisión**. Traduce el ruido del caos en mensaje coherente.</p>
+        <p>Representa la <span class="keyword">Mediación</span>. Indica que es momento de escuchar el consejo, de buscar enseñanza en lo sutil y confiar en el canal abierto.</p>
+        <p><strong>Frecuencia:</strong> Estabilidad, sabiduría compartida, orden espiritual.</p>
+      </div>
+
+      <div class="footer-info">
+        LAB_DESTINOS // PROYECTO: ARCHIVOS_MAYORES // OPERADOR: ZAPATOVSKY
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
