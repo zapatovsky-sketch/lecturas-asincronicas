@@ -3,13 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>el loco :: laboratorio de destinos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Responsividad del iframe */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 150%; /* relación de aspecto vertical */
+      height: 0;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (min-width: 768px) {
+      .iframe-container {
+        padding-bottom: 80%; /* relación de aspecto más horizontal en pantallas grandes */
+      }
+    }
+  </style>
 </head>
 <body class="bg-black text-white font-mono">
 
   <!-- núcleo visual: asset externo -->
-  <div id="imagen-central" class="flex justify-center p-6 bg-gradient-to-b from-[#0ff0fc] via-[#222222] to-[#3a0ca3]">
-    <!-- aquí se inyectará el contenido de 0elloco.html -->
+  <div class="iframe-container">
+    <iframe src="0elloco.html"></iframe>
   </div>
 
   <!-- flujo narrativo difuminado -->
@@ -50,18 +74,6 @@
       <footer class="text-center mt-2">firma: pablo c. torres :: integración completada</footer>
     </section>
   </div>
-
-  <!-- script para integrar el asset -->
-  <script>
-    fetch("0elloco.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("imagen-central").innerHTML = html;
-      })
-      .catch(err => {
-        document.getElementById("imagen-central").innerHTML = "<p>Error al cargar asset</p>";
-      });
-  </script>
 
 </body>
 </html>
