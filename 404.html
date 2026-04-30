@@ -3,135 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA: ERROR DE DECODIFICACIÓN</title>
+    <title>LAB_DESTINOS: SECTOR NO CARTOGRAFIADO</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
 
         :root {
-            --bg-color: #0a0000;
-            --error-red: #ff0000;
+            --bg-color: #050505;
             --primary: #d4af37;
+            --cyber: #00ff41;
             --industrial: #2a2a2a;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--error-red);
+            background-image: 
+                radial-gradient(circle, #111 1px, transparent 1px);
+            background-size: 25px 25px;
+            color: #e0e0e0;
             font-family: 'Share Tech Mono', monospace;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            text-align: center;
-            overflow: hidden;
+            padding: 20px;
         }
 
         .error-container {
-            border: 2px solid var(--error-red);
-            padding: 40px;
-            background: rgba(255, 0, 0, 0.05);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            background: rgba(10, 10, 10, 0.95);
+            border: 2px solid var(--industrial);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1), inset 0 0 20px rgba(0, 255, 65, 0.02);
             max-width: 500px;
+            width: 100%;
+            padding: 45px;
             position: relative;
-            animation: shake 0.8s infinite;
+            text-align: center;
         }
 
         h1 {
             font-family: 'Syncopate', sans-serif;
-            font-size: 32px;
-            margin: 0 0 20px 0;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: blink 0.8s infinite;
+            color: var(--cyber);
+            font-size: 26px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .sys-log {
+            font-size: 12px;
+            color: #555;
+            text-align: left;
+            margin-bottom: 20px;
+            border-left: 2px solid var(--industrial);
+            padding-left: 10px;
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #aaa;
             margin-bottom: 30px;
-            color: #ccc;
         }
 
-        .glitch-text {
-            font-weight: bold;
-            color: var(--error-red);
-            display: block;
-            margin-bottom: 20px;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 11px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        input {
+            background: #0a0a0a;
+            border: 1px solid var(--industrial);
+            color: white;
+            padding: 14px;
+            font-family: 'Share Tech Mono', monospace;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input:focus { 
+            border-color: var(--cyber);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
         }
 
         button {
             background: transparent;
+            border: 2px solid var(--primary);
             color: var(--primary);
-            border: 1px solid var(--primary);
-            padding: 10px 20px;
-            font-family: 'Share Tech Mono', monospace;
+            padding: 18px;
             cursor: pointer;
             text-transform: uppercase;
-            transition: all 0.3s;
+            font-weight: bold;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            margin-top: 10px;
         }
 
         button:hover {
             background: var(--primary);
             color: black;
-            box-shadow: 0 0 15px var(--primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
 
-        @keyframes blink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0.1; }
-        }
-
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            20% { transform: translate(-1px, -2px) rotate(-1deg); }
-            40% { transform: translate(-3px, 0px) rotate(1deg); }
-            60% { transform: translate(3px, 2px) rotate(0deg); }
-            80% { transform: translate(1px, -1px) rotate(1deg); }
-            100% { transform: translate(-1px, 2px) rotate(-1deg); }
-        }
-
-        /* Ruido estático de fondo */
-        .noise {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://media.giphy.com/media/oEI9uWUicKgR6/giphy.gif');
-            opacity: 0.03;
-            pointer-events: none;
-        }
-
-        .footer {
-            font-size: 12px;
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            font-size: 11px;
             color: #444;
-            margin-top: 20px;
+            text-decoration: none;
+            letter-spacing: 1px;
         }
+        
+        .back-link:hover { color: var(--primary); }
     </style>
 </head>
 <body>
-    <div class="noise"></div>
+
     <div class="error-container">
-        <h1>ERROR 404</h1>
-        <span class="glitch-text">[ ARCHIVO NO ENCONTRADO EN EL SECTOR ]</span>
-        <p>La llave ingresada no coincide con ningún registro activo en el Laboratorio de Destinos. Es posible que el archivo aún se esté procesando o que la secuencia sea incorrecta.</p>
+        <div class="sys-log">
+            [SYS_ALERT]: DATA_NOT_FOUND<br>
+            [LOCATION]: UNKNOWN_SECTOR<br>
+            [STATUS]: WAITING_FOR_INPUT...
+        </div>
+
+        <h1>COORDENADA VACÍA</h1>
         
-        <p style="font-size: 14px; color: #666;">REVISA MINÚSCULAS Y ESPACIOS_</p>
-        
-        <button onclick="window.location.href='index.html'">Reintentar Secuencia</button>
-        <div class="footer">LAB_DESTINOS // ERROR: TU SECUENCIA NO ES DIGNA</div>
+        <p>Has intentado acceder a un código que no existe en el registro actual del Laboratorio. Sin embargo, en la Arqueniería, <span style="color:var(--primary)">el vacío es solo espacio por construir</span>.</p>
+
+        <form action="https://formspree.io/f/mnjwqqez" method="POST">
+            <div class="input-group">
+                <label>Código solicitado</label>
+                <input type="text" name="clave_fallida" placeholder="ej: amor, abundancia..." required>
+            </div>
+            
+            <div class="input-group">
+                <label>Correo de enlace</label>
+                <input type="email" name="email" placeholder="tu@frecuencia.com" required>
+            </div>
+
+            <input type="hidden" name="_subject" value="NUEVA SOLICITUD DE DECODIFICACIÓN">
+
+            <button type="submit">SOLICITAR CARTOGRAFÍA</button>
+        </form>
+
+        <a href="index.html" class="back-link">> REINTENTAR SECUENCIA EN PORTAL</a>
     </div>
 
-    <script>
-        const mensajes = [
-            "[ ARCHIVO NO ENCONTRADO EN EL SECTOR ]",
-            "[ EL SISTEMA SE RÍE DE TI ]",
-            "[ SECUENCIA INVALIDA: VUELVE A INTENTARLO ]",
-            "[ EL PORTAL NO RECONOCE TU CLAVE ]"
-        ];
-        let i = 0;
-        setInterval(() => {
-            document.querySelector(".glitch-text").textContent = mensajes[i % mensajes.length];
-            i++;
-        }, 3000);
-    </script>
 </body>
 </html>
