@@ -2,77 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>el loco :: laboratorio de destinos</title>
+  <title>El Loco :: Carta Inmersiva</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Responsividad del iframe */
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 150%; /* relación de aspecto vertical */
-      height: 0;
-      overflow: hidden;
+    body {
+      background-color: #030303;
+      background-image: radial-gradient(circle at 20% 30%, rgba(157, 0, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(0, 242, 255, 0.1) 0%, transparent 50%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: monospace;
+      color: #e0e0e0;
     }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
+    .card {
+      background: rgba(10, 10, 10, 0.85);
+      border: 2px solid #2a2a2a;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 0, 77, 0.3);
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
     }
-    @media (min-width: 768px) {
-      .iframe-container {
-        padding-bottom: 80%; /* relación de aspecto más horizontal en pantallas grandes */
-      }
+    .title {
+      font-size: 2rem;
+      color: #39ff14;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .freq {
+      font-style: italic;
+      color: #ff004d;
+      margin-bottom: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #999;
+    }
+    img {
+      max-width: 100%;
+      border: 6px solid #ff004d;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 10px;
     }
   </style>
 </head>
-<body class="bg-black text-white font-mono">
+<body>
 
-  <!-- núcleo visual: asset externo -->
-  <div class="iframe-container">
-    <iframe src="0elloco.html"></iframe>
-  </div>
+  <div class="card">
+    <!-- Imagen central (del 0elloco) -->
+    <img src="https://opal.google/board/blobs/0d25707e-64f2-48f3-a093-5b6bd00f3278" alt="El Loco">
 
-  <!-- flujo narrativo difuminado -->
-  <div class="p-6 space-y-8">
-    <section class="text-green-400">
-      <h2 class="text-[#0ff0fc]">Operador Zapatovsky</h2>
-      <p>frecuencia alterada :: vibración iniciada</p>
-      <p>órbita desviada :: bug incinerado</p>
-      <footer class="text-[#ff004d]">firma: operador zapatovsky</footer>
-    </section>
+    <!-- Audio ritual integrado -->
+    <audio controls>
+      <source src="https://opal.google/board/blobs/4609c1ae-55c5-4648-bc5a-2b0ba22a7390" type="audio/mpeg">
+      Tu navegador no soporta audio ritual
+    </audio>
 
-    <section class="bg-[#222222] text-[#d4a373] p-4 font-mono">
-      <p>[registro obrero]</p>
-      <p>carta: el loco</p>
-      <p>material: cemento fresco + hierro oxidado</p>
-      <p>estado: estructura reensamblada :: quiebre reconfigurado</p>
-      <footer>voz: 96 pablo</footer>
-    </section>
-
-    <section class="bg-[#f8f9fa] text-[#3a0ca3] font-serif p-6">
-      <h1>le fou</h1>
-      <p>tradición marsella: figura errante, sin rumbo fijo</p>
-      <p>contraste: engranajes y fábricas acompañan su andar</p>
-      <p>dualidad: espíritu libre vs materia pesada</p>
-      <audio controls>
-        <source src="elloco-sonido.mp3" type="audio/mpeg">
-        tu navegador no soporta audio ritual
-      </audio>
-      <footer class="text-[#ffd700]">firma: profe:pablo :: parábola recorrida</footer>
-    </section>
-
-    <section class="bg-[#3a0ca3] text-white p-6">
-      <p class="text-center text-[#ffd700] text-xl">leloco: salto al vacío</p>
-      <audio controls>
-        <source src="elloco-visual.mp3" type="audio/mpeg">
-        audio inmersivo no disponible
-      </audio>
-      <footer class="text-center mt-2">firma: pablo c. torres :: integración completada</footer>
-    </section>
+    <!-- Narrativa mínima -->
+    <h1 class="title">El Loco</h1>
+    <p class="freq">frecuencia: caos fértil :: órbita desviada</p>
+    <div class="footer">LAB_DESTINOS // OPERADOR: ZAPATOVSKY</div>
   </div>
 
 </body>
