@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane Revelation - La Emperatriz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#030008',
+                        'electric-purple': '#bc13fe',
+                        'neon-cyan': '#00f3ff',
+                        'deep-indigo': '#1a0b2e',
+                        'arcane-gold': '#ffd700',
+                    },
+                    fontFamily: {
+                        display: ['Bebas Neue', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow-float': 'glowFloat 6s ease-in-out infinite',
+                        'scanline': 'scanline 8s linear infinite',
+                    },
+                    keyframes: {
+                        glowFloat: {
+                            '0%, 100%': { transform: 'translateY(0)', filter: 'drop-shadow(0 0 20px rgba(188, 19, 254, 0.4))' },
+                            '50%': { transform: 'translateY(-15px)', filter: 'drop-shadow(0 0 40px rgba(0, 243, 255, 0.6))' },
+                        },
+                        scanline: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030008;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #1a0b2e 0%, #030008 100%),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3C%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-blend-mode: soft-light;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(26, 11, 46, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(188, 19, 254, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .text-glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8), 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+
+        .text-glow-purple {
+            text-shadow: 0 0 15px rgba(188, 19, 254, 0.8);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030008;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bc13fe;
+            border-radius: 10px;
+        }
+
+        .cyber-border {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(45deg, #bc13fe, transparent, #00f3ff);
+            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        }
+
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-neon-cyan selection:text-void">
+
+    <!-- Ambient Overlay Effects -->
+    <div class="fixed inset-0 pointer-events-none z-50 opacity-[0.03] overflow-hidden">
+        <div class="absolute inset-0 bg-scanline animate-scanline"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="relative z-10 pt-12 pb-6 px-6 text-center">
+        <div class="inline-block">
+            <span class="font-tech text-[10px] tracking-[0.4em] uppercase text-neon-cyan/60 block mb-2">Technical Esotericism // System Online</span>
+            <h2 class="font-tech text-lg md:text-xl tracking-widest text-white/90 uppercase">
+                Your Arcane <span class="text-electric-purple text-glow-purple">Revelation</span>
+            </h2>
+            <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-electric-purple to-transparent mt-4 opacity-50"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-8 md:py-16 max-w-5xl mx-auto">
+        
+        <!-- Card Container -->
+        <div class="w-full flex flex-col items-center">
+            
+            <!-- Arcano Title -->
+            <div class="mb-12 text-center animate-pulse-slow">
+                <h1 class="font-display text-7xl md:text-9xl lg:text-[10rem] leading-none tracking-tighter text-white uppercase transform -skew-x-2">
+                    La <span class="text-neon-cyan text-glow-cyan">Emperatriz</span>
+                </h1>
+                <div class="flex items-center justify-center gap-4 mt-4">
+                    <span class="h-[2px] w-12 bg-neon-cyan"></span>
+                    <p class="font-tech text-xs md:text-sm tracking-[0.3em] text-white/40 uppercase">Major Arcana III</p>
+                    <span class="h-[2px] w-12 bg-neon-cyan"></span>
+                </div>
+            </div>
+
+            <!-- Artwork Display -->
+            <div class="relative group animate-glow-float">
+                <!-- Background Decorative Elements -->
+                <div class="absolute -inset-10 bg-electric-purple/20 blur-[100px] rounded-full group-hover:bg-neon-cyan/20 transition-all duration-700"></div>
+                
+                <!-- The "Cyber-Occult" Frame -->
+                <div class="cyber-border">
+                    <div class="bg-void p-1">
+                        <div class="media-container overflow-hidden shadow-[0_0_50px_rgba(0,0,0,1)]">
+                            <img src='https://opal.google/board/blobs/f0c549c8-1d9b-4ec4-8e28-525bc0e455e2' alt='media_1' class="w-full max-w-[500px] object-cover hover:scale-105 transition-transform duration-700 ease-out" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtle Technical Overlays -->
+                <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-neon-cyan opacity-40"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-electric-purple opacity-40"></div>
+                
+                <!-- Interactive Metadata Nodes (Visual Only) -->
+                <div class="absolute top-1/4 -right-8 md:-right-16 hidden md:block">
+                    <div class="glass-panel p-3 rounded-sm border-l-4 border-l-neon-cyan">
+                        <div class="text-[10px] font-tech text-neon-cyan/70 mb-1">STABILITY_LVL</div>
+                        <div class="text-xs font-display text-white tracking-widest uppercase">Maximal Prime</div>
+                    </div>
+                </div>
+                <div class="absolute bottom-1/4 -left-8 md:-left-16 hidden md:block">
+                    <div class="glass-panel p-3 rounded-sm border-r-4 border-r-electric-purple text-right">
+                        <div class="text-[10px] font-tech text-electric-purple/70 mb-1">ESSENCE_FREQ</div>
+                        <div class="text-xs font-display text-white tracking-widest uppercase">777.42 Hz</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer-like Decorative Block -->
+            <div class="mt-20 glass-panel px-8 py-6 rounded-none border-t-2 border-t-electric-purple max-w-2xl text-center">
+                <p class="font-body text-sm md:text-base text-white/60 leading-relaxed uppercase tracking-[0.1em]">
+                    Manifesting abundance through <span class="text-white font-bold">Sacred Geometry</span> and <span class="text-neon-cyan">Digital Alchemy</span>.
+                </p>
+                <div class="mt-4 flex justify-center gap-6">
+                    <div class="w-2 h-2 bg-neon-cyan rotate-45"></div>
+                    <div class="w-2 h-2 bg-electric-purple rotate-45"></div>
+                    <div class="w-2 h-2 bg-arcane-gold rotate-45"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom Cursor Glow Follower (Optional JS behavior) -->
+    <div id="cursor-glow" class="fixed top-0 left-0 w-[400px] h-[400px] bg-electric-purple/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2 z-0 hidden lg:block"></div>
+
+    <script>
+        // Smooth mouse glow effect
+        const glow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            glow.style.transform = `translate(${x - 200}px, ${y - 200}px)`;
+        });
+
+        // Add subtle tilt effect to the image container
+        const card = document.querySelector('.cyber-border');
+        document.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+    </script>
+</body>
+</html>
+

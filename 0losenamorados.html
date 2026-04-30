@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane Revelation - Los Enamorados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Rajdhani:wght@300;500;700&family=Outfit:wght@100;400;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#020205',
+                        electric: '#00f2ff',
+                        magenta: '#ff00fb',
+                        toxic: '#39ff14',
+                        voltage: '#7d00ff',
+                    },
+                    fontFamily: {
+                        technical: ['Syncopate', 'sans-serif'],
+                        futuristic: ['Rajdhani', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'scanline': 'scanline 8s linear infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scanline: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(1000%)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(125, 0, 255, 0.3), 0 0 40px rgba(0, 242, 255, 0.2)' },
+                            '100%': { boxShadow: '0 0 40px rgba(125, 0, 255, 0.6), 0 0 80px rgba(0, 242, 255, 0.4)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020205;
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .psychedelic-bg {
+            background: radial-gradient(circle at 50% 50%, #1a0033 0%, #020205 70%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            opacity: 0.4;
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.8), 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        .card-container::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #7d00ff, #00f2ff, #ff00fb, #39ff14);
+            z-index: -1;
+            border-radius: 12px;
+            opacity: 0.3;
+            transition: opacity 0.5s ease;
+        }
+
+        .card-container:hover::before {
+            opacity: 0.8;
+        }
+
+        .scanline-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.5), transparent);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .artwork-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            filter: saturate(1.2) contrast(1.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 md:p-10">
+
+    <div class="psychedelic-bg"></div>
+    <div class="mesh-gradient"></div>
+
+    <!-- Header Section -->
+    <header class="w-full max-w-4xl flex justify-center mb-12 relative">
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-electric to-transparent opacity-50"></div>
+        <div class="flex flex-col items-center gap-2">
+            <span class="font-futuristic tracking-[0.5em] text-[10px] text-electric uppercase opacity-70">Initiating Sequence</span>
+            <h2 class="font-technical text-sm md:text-lg tracking-widest text-white text-center uppercase">
+                Your Arcane Revelation
+            </h2>
+            <div class="flex gap-4 mt-2">
+                <div class="w-2 h-2 rounded-full bg-magenta animate-pulse"></div>
+                <div class="w-2 h-2 rounded-full bg-electric animate-pulse" style="animation-delay: 0.5s"></div>
+                <div class="w-2 h-2 rounded-full bg-toxic animate-pulse" style="animation-delay: 1s"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-2xl flex flex-col items-center">
+        
+        <!-- Arcane Title Above -->
+        <div class="mb-8 text-center">
+            <h1 class="font-technical text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white uppercase relative inline-block group">
+                <span class="relative z-10 mix-blend-difference">Los Enamorados</span>
+                <span class="absolute -inset-1 bg-gradient-to-r from-voltage to-electric blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></span>
+                <div class="mt-4 flex items-center justify-center gap-4">
+                    <div class="h-[1px] w-12 bg-electric"></div>
+                    <span class="font-futuristic text-xs tracking-[0.3em] text-electric">VI • THE LOVERS</span>
+                    <div class="h-[1px] w-12 bg-electric"></div>
+                </div>
+            </h1>
+        </div>
+
+        <!-- The Card Artwork -->
+        <div class="relative card-container glass-panel p-1 rounded-xl group animate-float">
+            <div class="scanline-effect animate-scanline"></div>
+            
+            <!-- Technical Deco Corners -->
+            <div class="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-electric opacity-50 group-hover:opacity-100 transition-all"></div>
+            <div class="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-magenta opacity-50 group-hover:opacity-100 transition-all"></div>
+            
+            <!-- Image Wrapper -->
+            <div class="artwork-img relative overflow-hidden rounded-lg shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                <img src='https://opal.google/board/blobs/5526c43e-4696-4669-bb0d-779b54a58928' alt='Los Enamorados Tarot Artwork' class="z-0" />
+                
+                <!-- Overlay for maximalist feel -->
+                <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent opacity-40"></div>
+                
+                <!-- Interactive Glitch Layer (Invisible until hover) -->
+                <div class="absolute inset-0 bg-electric/10 opacity-0 group-hover:opacity-20 mix-blend-overlay transition-opacity"></div>
+            </div>
+        </div>
+
+        <!-- Technical Metadata -->
+        <div class="mt-12 w-full glass-panel p-6 rounded-lg grid grid-cols-2 md:grid-cols-4 gap-4 border border-white/5">
+            <div class="flex flex-col gap-1">
+                <span class="text-[10px] font-technical text-electric uppercase opacity-60">Status</span>
+                <span class="text-xs font-futuristic font-bold">MANIFESTED</span>
+            </div>
+            <div class="flex flex-col gap-1 border-l border-white/10 pl-4">
+                <span class="text-[10px] font-technical text-magenta uppercase opacity-60">Frequency</span>
+                <span class="text-xs font-futuristic font-bold">432.18 Hz</span>
+            </div>
+            <div class="flex flex-col gap-1 border-l border-white/10 pl-4">
+                <span class="text-[10px] font-technical text-toxic uppercase opacity-60">Origin</span>
+                <span class="text-xs font-futuristic font-bold">MAJOR ARCANA</span>
+            </div>
+            <div class="flex flex-col gap-1 border-l border-white/10 pl-4">
+                <span class="text-[10px] font-technical text-white uppercase opacity-60">ID</span>
+                <span class="text-xs font-futuristic font-bold">ARC-006</span>
+            </div>
+        </div>
+
+        <!-- Sensory Interaction Prompt -->
+        <div class="mt-8">
+            <button onclick="window.location.reload()" class="group relative px-8 py-3 overflow-hidden rounded-full transition-all bg-transparent border border-white/20 hover:border-electric/50">
+                <div class="absolute inset-0 bg-electric translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300"></div>
+                <span class="relative z-10 font-technical text-[10px] tracking-widest text-white group-hover:text-void transition-colors">
+                    RE-ALIGN ENERGIES
+                </span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Visual Polish: Floating Particles -->
+    <div class="fixed pointer-events-none inset-0 z-50">
+        <div class="absolute top-1/4 left-10 w-1 h-1 bg-electric rounded-full animate-pulse shadow-[0_0_10px_#00f2ff]"></div>
+        <div class="absolute bottom-1/4 right-12 w-1 h-1 bg-magenta rounded-full animate-pulse shadow-[0_0_10px_#ff00fb]" style="animation-delay: 2s"></div>
+        <div class="absolute top-3/4 left-1/3 w-1 h-1 bg-toxic rounded-full animate-pulse shadow-[0_0_10px_#39ff14]" style="animation-delay: 1s"></div>
+    </div>
+
+    <script>
+        // Subtle tilt effect on mouse move for the card
+        const card = document.querySelector('.card-container');
+        document.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Reset transform on mouse out
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+    </script>
+</body>
+</html>
+

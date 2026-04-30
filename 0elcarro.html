@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane Revelation - El Carro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Syncopate:wght@400;700&family=Michroma&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050505',
+                        cyber: {
+                            purple: '#6d28d9',
+                            indigo: '#4338ca',
+                            cyan: '#06b6d4',
+                            neon: '#a855f7',
+                            radioactive: '#22c55e'
+                        }
+                    },
+                    fontFamily: {
+                        technical: ['Syncopate', 'sans-serif'],
+                        modern: ['Outfit', 'sans-serif'],
+                        futuristic: ['Michroma', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glitch': 'glitch 1s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 15, 20, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(109, 40, 217, 0.2);
+        }
+
+        .neo-glow {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+
+        .cyber-border {
+            position: relative;
+        }
+
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #6d28d9, transparent, #06b6d4, transparent, #a855f7);
+            z-index: -1;
+            border-radius: 4px;
+            opacity: 0.5;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(273, 98%, 15%, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, hsla(200, 98%, 15%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 50%, hsla(280, 50%, 5%, 1) 0, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col items-center justify-center p-6 md:p-12 relative">
+    
+    <!-- Atmospheric Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyber-purple/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyber-cyan/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="scanline"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full max-w-4xl mb-12 relative z-10 text-center">
+        <div class="inline-block">
+            <span class="text-[10px] tracking-[0.5em] uppercase font-technical text-cyber-cyan/60 block mb-2">Technical Esotericism v1.0</span>
+            <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-cyber-cyan to-transparent mb-4"></div>
+            <h2 class="text-xs md:text-sm font-modern tracking-[0.3em] uppercase text-white/80">Your Arcane Revelation</h2>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-5xl flex flex-col items-center justify-center relative z-10">
+        
+        <!-- Arcane Title Top (Technical Presentation) -->
+        <div class="mb-8 text-center group">
+            <div class="flex items-center justify-center gap-4 mb-2">
+                <div class="h-[1px] w-8 md:w-16 bg-cyber-purple"></div>
+                <h1 class="text-4xl md:text-7xl font-technical font-bold tracking-tighter uppercase text-white neo-glow group-hover:scale-105 transition-transform duration-500">
+                    El Carro
+                </h1>
+                <div class="h-[1px] w-8 md:w-16 bg-cyber-purple"></div>
+            </div>
+            <p class="font-modern text-[10px] md:text-xs text-cyber-neon tracking-[0.4em] uppercase opacity-80">Arcano Mayor VII</p>
+        </div>
+
+        <!-- The Card Display -->
+        <div class="relative group animate-float">
+            <!-- Decorative Frames -->
+            <div class="absolute -inset-4 border border-white/5 rounded-lg pointer-events-none"></div>
+            <div class="absolute -inset-8 border border-white/5 rounded-lg pointer-events-none scale-95 opacity-50"></div>
+            
+            <!-- Technical Accents at corners -->
+            <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyber-cyan z-20"></div>
+            <div class="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cyber-cyan z-20"></div>
+            <div class="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-cyber-cyan z-20"></div>
+            <div class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-cyber-cyan z-20"></div>
+
+            <!-- Card Container -->
+            <div class="glass-card p-2 md:p-4 rounded-xl overflow-hidden transition-all duration-700 group-hover:shadow-[0_0_80px_rgba(109,40,217,0.4)] group-hover:border-white/20">
+                <div class="relative overflow-hidden rounded-lg shadow-2xl">
+                    <!-- The Artwork -->
+                    <div class="max-w-[320px] md:max-w-[480px] lg:max-w-[560px] aspect-[2/3.5] flex items-center justify-center overflow-hidden">
+                        <img src='https://opal.google/board/blobs/9640f969-6980-4afc-8a07-9c14c62afb31' alt='El Carro Tarot' class="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110" loading="lazy" />
+                    </div>
+                    
+                    <!-- Overlay Grid / Technical Layer -->
+                    <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] z-10 pointer-events-none bg-[length:100%_4px,3px_100%]"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Readout (Visual Flavor) -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl opacity-60">
+            <div class="flex flex-col items-center p-3 border border-white/10 glass-card">
+                <span class="text-[9px] font-technical text-cyber-cyan uppercase mb-1">Vector</span>
+                <span class="text-xs font-modern uppercase">Movement</span>
+            </div>
+            <div class="flex flex-col items-center p-3 border border-white/10 glass-card">
+                <span class="text-[9px] font-technical text-cyber-cyan uppercase mb-1">State</span>
+                <span class="text-xs font-modern uppercase">Victory</span>
+            </div>
+            <div class="flex flex-col items-center p-3 border border-white/10 glass-card">
+                <span class="text-[9px] font-technical text-cyber-cyan uppercase mb-1">Drive</span>
+                <span class="text-xs font-modern uppercase">Willpower</span>
+            </div>
+            <div class="flex flex-col items-center p-3 border border-white/10 glass-card">
+                <span class="text-[9px] font-technical text-cyber-cyan uppercase mb-1">System</span>
+                <span class="text-xs font-modern uppercase">Control</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Side Labels (Technical Aesthetics) -->
+    <div class="hidden lg:block fixed left-12 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
+        <span class="font-technical text-[10px] tracking-[1em] text-white/20 whitespace-nowrap uppercase">Sequence Number 007 // Binary Oracle</span>
+    </div>
+    <div class="hidden lg:block fixed right-12 top-1/2 -translate-y-1/2 rotate-90 origin-center">
+        <span class="font-technical text-[10px] tracking-[1em] text-white/20 whitespace-nowrap uppercase">Synchronicity Established // Data Pure</span>
+    </div>
+
+    <script>
+        // Subtle Mouse parallax for the card
+        document.addEventListener('mousemove', (e) => {
+            const card = document.querySelector('.animate-float');
+            if(!card) return;
+            
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
+            
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Reset transform on mouse out
+        document.addEventListener('mouseleave', () => {
+            const card = document.querySelector('.animate-float');
+            if(!card) return;
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+    </script>
+</body>
+</html>
+
