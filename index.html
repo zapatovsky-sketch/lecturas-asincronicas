@@ -9,8 +9,9 @@
 
         :root {
             --bg-color: #050505;
-            --primary: #d4af37; /* Dorado esotérico */
-            --cyber: #00ff41;  /* Verde terminal */
+            --primary: #d4af37;
+            --cyber: #00ff41;
+            --error-red: #ff004d;
             --industrial: #2a2a2a;
         }
 
@@ -30,7 +31,6 @@
             overflow: hidden;
         }
 
-        /* Contenedor Maximalista */
         .terminal-box {
             background: rgba(10, 10, 10, 0.9);
             border: 4px solid var(--industrial);
@@ -44,7 +44,6 @@
             text-align: center;
         }
 
-        /* Adornos Industriales */
         .terminal-box::before, .terminal-box::after {
             content: '';
             position: absolute;
@@ -74,7 +73,6 @@
             padding-bottom: 10px;
         }
 
-        /* Input Ciber-Místico */
         .input-group {
             margin: 30px 0;
             position: relative;
@@ -105,7 +103,16 @@
             font-size: 16px;
         }
 
-        /* Botón de Acción */
+        .error {
+            animation: glitch 0.5s 3;
+        }
+
+        @keyframes glitch {
+            0% { border-bottom-color: var(--error-red); }
+            50% { border-bottom-color: var(--cyber); }
+            100% { border-bottom-color: var(--error-red); }
+        }
+
         button {
             background: transparent;
             color: var(--cyber);
@@ -135,7 +142,13 @@
             text-transform: uppercase;
         }
 
-        /* Animación de escaneo */
+        .easter {
+            display: none;
+            color: var(--error-red);
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
         .scanline {
             width: 100%;
             height: 2px;
@@ -150,6 +163,12 @@
         @keyframes scan {
             0% { top: 0; }
             100% { top: 100%; }
+        }
+
+        .output {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--cyber);
         }
     </style>
 </head>
@@ -169,36 +188,42 @@
 
         <div class="warning">
             ACCESO RESTRINGIDO // LA INFORMACIÓN CONTENIDA ES DE CARÁCTER EVOLUTIVO
+            <div class="easter">>> El portal observa tu intento...</div>
         </div>
+
+        <div id="output" class="output"></div>
     </div>
 
     <script>
         function iniciarSecuencia() {
-            // Obtenemos el valor, lo pasamos a minúsculas y le quitamos espacios
-            let clave = document.getElementById('claveInput').value.trim().toLowerCase();
+            let claveInput = document.getElementById('claveInput');
+            let clave = claveInput.value.trim().toLowerCase();
+            let output = document.getElementById('output');
             
             if (clave !== "") {
-                // Pequeño efecto visual en el botón antes de redirigir
+                output.textContent = ">> Procesando secuencia: " + clave;
                 let btn = document.querySelector('button');
                 btn.innerHTML = "Sincronizando...";
                 btn.style.background = "var(--primary)";
                 btn.style.color = "#000";
                 btn.style.borderColor = "var(--primary)";
-
-                // Redirección con un retraso intencional para dar la sensación de "conexión"
                 setTimeout(() => {
                     window.location.href = clave + ".html";
-                }, 800);
+                }, 1000);
             } else {
-                alert("ERROR: SECUENCIA VACÍA. REQUIERE CLAVE IDENTIFICADORA.");
+                claveInput.classList.add("error");
+                output.textContent = ">> ERROR: SECUENCIA VACÍA. REQUIERE CLAVE IDENTIFICADORA.";
             }
         }
 
-        // Permitir usar la tecla "Enter"
         document.getElementById('claveInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 iniciarSecuencia();
             }
+        });
+
+        document.querySelector(".warning").addEventListener("mouseenter", () => {
+            document.querySelector(".easter").style.display = "block";
         });
     </script>
 
