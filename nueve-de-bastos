@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: NUEVE DE BASTOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0nuevebastos.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>NUEVE DE BASTOS</h1>
+      <h2>La Resiliencia del Guardián</h2>
+
+      <p>Si el <strong>Rey de Bastos</strong> era la expansión del poder, el <strong>Nueve de Bastos</strong> es la defensa de la frontera conquistada. Es la frecuencia de la <strong>resistencia final</strong>. En la arquitectura de nuestra enciclopedia, representa el <strong>Muro de Carga del Espíritu</strong>: ese momento en que el proyecto está casi terminado, pero el cansancio y las cicatrices del proceso amenazan con detenernos. Es la prueba de la perseverancia antes de la culminación.</p>
+
+      <h3>La Narrativa de la Guardia Eterna</h3>
+      <p>Un hombre se apoya en un basto, con la cabeza vendada y la mirada alerta. Detrás de él, ocho bastos forman una empalizada, una estructura defensiva que él mismo ha levantado. No está atacando; está sosteniendo. El <strong>Nueve de Bastos</strong> es la energía del "último aliento". Representa al creador que ha pasado por el fuego del Caballero y las flechas del Ocho, y aunque está herido, se niega a soltar su puesto.</p>
+      <p>Es la fase de la <strong>Saturación Crítica</strong>. Representa ese instante en el estudio de grabación donde el oído está fatigado, o esa etapa de la remodelación del "Santuario Sonoro" donde los materiales se agotan y el cuerpo duele, pero la visión sigue intacta. Es la disciplina que surge del agotamiento; la fuerza que aparece cuando ya no queda fuerza, nacida puramente de la convicción.</p>
+
+      <h3>Metáforas de la Fortaleza Herida</h3>
+      <ul>
+        <li><strong>La Empalizada del Conocimiento:</strong> Los bastos detrás del guardián son sus experiencias pasadas. Cada uno es una lección aprendida, un obstáculo superado. Ahora no son herramientas de acción, sino muros de protección. El pasado ya no nos persigue, nos sostiene.</li>
+        <li><strong>La Venda del Veterano:</strong> La herida en la cabeza simboliza que el precio de la sabiduría ha sido pagado. No es una marca de derrota, sino un galón de guerra. Habitar esta carta es aceptar que el camino de la creación deja huellas, pero que esas huellas son la prueba de nuestra autenticidad.</li>
+        <li><strong>El Centinela del Umbral:</strong> Es la pausa tensa antes del éxito final. El guardián sabe que está a un solo paso del <strong>Diez de Bastos</strong> (la culminación del esfuerzo), y por eso su vigilancia es máxima. Es el rigor de quien no permite que un error de último minuto arruine años de trabajo.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Nueve de Bastos es conocer la verdadera naturaleza del coraje: no es la ausencia de miedo o dolor, sino la decisión de permanecer a pesar de ellos. Es la vibración del profesor que sigue enseñando en contextos difíciles, del artista que defiende su obra ante la crítica feroz, y de quien cuida su salud mental levantando límites claros frente al mundo.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es el <strong>Seguro de Integridad</strong>. Nos enseña que la protección de nuestra energía es tan importante como su expansión. Nos pregunta: <em>¿Qué estás dispuesto a defender con uñas y dientes? ¿Dónde termina tu obra y dónde empieza el ruido externo?</em> Es la invitación a confiar en nuestra propia resistencia. Estás cansado, sí, pero eres invencible mientras no abandones tu guardia.</p>
+
+      <blockquote>Resonancia: "Que tus cicatrices sean el mapa de tu victoria; no te rindas ahora, que el muro que has construido es más fuerte que el miedo que te acecha."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
