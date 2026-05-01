@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: REY DE BASTOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0reybastos.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>REY DE BASTOS</h1>
+      <h2>El Arquitecto del Fuego Sagrado</h2>
+
+      <p>Si el <strong>Ocho de Bastos</strong> era la flecha en vuelo, el <strong>Rey de Bastos</strong> es quien tensó el arco y quien ahora observa, desde su trono de salamandras, cómo el mundo se transforma bajo su visión. Es la cúspide de la voluntad humana. En la arquitectura de nuestra enciclopedia, representa la <strong>Maestría de la Manifestación</strong>: el momento en que el creador ya no solo tiene ideas, sino que se ha convertido en el centro de gravedad que atrae los recursos para hacerlas realidad.</p>
+
+      <h3>La Narrativa del Poder Visionario</h3>
+      <p>Sentado en un trono decorado con el león y la salamandra —símbolos del instinto indomable y la transmutación a través del fuego—, el Rey sostiene su basto con la naturalidad de quien sostiene el eje del mundo. Él no necesita correr como el Caballero ni esperar la señal como las sotas; él <strong>es</strong> la señal. Su mirada está puesta en el horizonte, no en el presente, porque su mente ya está construyendo lo que vendrá después.</p>
+      <p>Es la frecuencia del <strong>Líder Carismático</strong> y del <strong>Emprendedor Serial</strong>. Representa al productor que no solo graba pistas, sino que funda un sello; al profesor que no solo dicta una clase, sino que diseña un sistema pedagógico revolucionario. Es el fuego que ha aprendido a ser estructura, la pasión que se ha vuelto disciplina. En el Laboratorio, es la figura que garantiza que el "Santuario Sonoro" no sea solo un sueño, sino una construcción de ladrillo, madera y propósito.</p>
+
+      <h3>Metáforas de la Voluntad Solar</h3>
+      <ul>
+        <li><strong>El Sol en el Trono:</strong> El Rey no busca la luz, él emana la luz. Su presencia calienta los proyectos fríos y da valor a los corazones dubitativos. Es la autoridad que nace de la capacidad de inspirar, no de la necesidad de controlar.</li>
+        <li><strong>El Domador de Salamandras:</strong> El fuego es un elemento peligroso que puede consumir al creador. El Rey es aquel que ha caminado por las llamas y ha regresado con el secreto de cómo usarlas para forjar el destino sin quemarse las manos.</li>
+        <li><strong>El Cetro de la Vitalidad:</strong> Su basto es un árbol vivo. Nos recuerda que el verdadero poder siempre está vinculado a la vida y al crecimiento. Si lo que construyes no crece por sí solo, no estás actuando como un Rey, sino como un capataz.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Rey de Bastos es encarnar la autoconfianza radical. Es la vibración de quien toma la palabra en una asamblea y todos escuchan, de quien inicia un movimiento artístico desde la nada, y de quien tiene la energía para sostener grandes estructuras sobre sus hombros. Es el hombre que ha integrado sus deseos y los ha puesto al servicio de una visión mayor.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es el <strong>Sello del Realizador</strong>. Nos obliga a mirar nuestra obra con honestidad y preguntarnos: <em>¿Tengo el coraje de liderar mi propia vida? ¿Estoy construyendo un legado o solo acumulando tareas?</em> Es la invitación a sentarse en el trono de la propia existencia y gobernar con generosidad, audacia y una fe inquebrantable en el propio fuego interno.</p>
+
+      <blockquote>Resonancia: "No esperes a que el mundo te dé permiso; levántate, nombra tu reino y observa cómo la realidad se ordena ante tu paso."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
