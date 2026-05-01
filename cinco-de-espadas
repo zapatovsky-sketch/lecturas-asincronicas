@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: CINCO DE ESPADAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0cincoespadas.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>CINCO DE ESPADAS</h1>
+      <h2>La Victoria Pírrica y el Desierto del Ego</h2>
+
+      <p>Si el <strong>Nueve de Bastos</strong> era la resistencia honorable, el <strong>Cinco de Espadas</strong> es la colisión de las voluntades donde la verdad se sacrifica en el altar de la razón. Es la frecuencia de la <strong>discordia intelectual</strong>. En la arquitectura de nuestra enciclopedia, representa el <strong>Punto de Ruptura del Sistema</strong>: el momento en que la estructura se quiebra no por un peso externo, sino por la fricción interna de los elementos que no saben cooperar.</p>
+
+      <h3>La Narrativa de la Derrota en el Triunfo</h3>
+      <p>Bajo un cielo de nubes desgarradas, una figura recoge las espadas de sus oponentes con una sonrisa amarga. Ha ganado la batalla, pero se ha quedado solo en el campo. El <strong>Cinco de Espadas</strong> es el costo oculto de tener la razón a toda costa. Representa ese estado donde el creador se impone sobre su equipo, donde el ego aplasta la intuición del colaborador, o donde la técnica se vuelve tan rígida que mata el alma de la obra.</p>
+      <p>Es la fase de la <strong>Saturación Tóxica</strong>. Es el ruido que se genera cuando las frecuencias chocan en lugar de armonizarse. En el Laboratorio, es la advertencia contra la soberbia del "yo" que olvida que todo destino se construye en red. Es una victoria vacía: tienes las espadas, tienes el control, pero el Santuario se ha quedado en silencio porque has expulsado a los músicos.</p>
+
+      <h3>Metáforas del Filo que Aísla</h3>
+      <ul>
+        <li><strong>El Campo de los Egos Heridos:</strong> Las espadas esparcidas en el suelo son los restos de una comunicación fallida. Cada una representa una idea que fue defendida como una verdad absoluta hasta que se convirtió en un arma.</li>
+        <li><strong>El Viento de la Soledad:</strong> El aire en esta carta es frío y cortante. No hay calidez humana porque el intelecto ha sido usado para separar, no para unir. Es la lucidez de la Reina de Espadas, pero sin su nobleza; es solo poder mental usado para la dominación.</li>
+        <li><strong>La Muralla de Cristal:</strong> El ganador levanta una barrera invisible entre él y el mundo. Al humillar al otro para demostrar superioridad, el creador se encierra en una celda de cristal donde nadie puede alcanzarlo, pero donde él tampoco puede tocar a nadie.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Cinco de Espadas es enfrentarse al espejo de la propia arrogancia. Es la vibración de la discusión estéril, del resentimiento que queda tras un "te lo dije", y del aislamiento de quien no sabe pedir perdón. Representa al líder que se queda solo porque no supo escuchar, o al artista que destruye sus alianzas por un exceso de perfeccionismo cruel.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es la <strong>Alarma de Coherencia Ética</strong>. Nos obliga a mirar los escombros de nuestros conflictos y preguntarnos: <em>¿Vale la pena ganar si el precio es la soledad? ¿Estoy construyendo un templo o una fortaleza de soberbia?</em> Es la invitación a soltar las espadas sobrantes y reconocer que la verdadera maestría no consiste en vencer al otro, sino en integrarlo. A veces, la única forma de ganar es dejar caer el arma.</p>
+
+      <blockquote>Resonancia: "No cuentes tus trofeos si para obtenerlos tuviste que convertir tu jardín en un campo de batalla."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
