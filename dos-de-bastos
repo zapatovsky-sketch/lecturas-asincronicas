@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: DOS DE BASTOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0dosbastos.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>DOS DE BASTOS</h1>
+      <h2>El Horizonte de la Voluntad</h2>
+
+      <p>Si el <strong>Cinco de Espadas</strong> era el campo de batalla desolado, el <strong>Dos de Bastos</strong> es la torre de vigilancia desde la cual se contempla un mundo nuevo por conquistar. Es la frecuencia de la <strong>Visión Estratégica</strong>. En la arquitectura de nuestra enciclopedia, representa el <strong>Umbral de la Expansión</strong>: el momento en que el creador, poseedor ya de un dominio, levanta la vista del mapa para mirar el territorio real.</p>
+
+      <h3>La Narrativa del Dominio en Suspenso</h3>
+      <p>Un hombre sostiene un mundo en miniatura en su mano derecha, mientras la izquierda se apoya en un basto anclado al muro. No está caminando; está <strong>observando</strong>. El <strong>Dos de Bastos</strong> es el estado de pausa fértil que sigue al primer éxito. Representa al productor que ya terminó su primer track y ahora, con el máster en la mano, decide hacia qué mercado o qué plataforma lanzarlo. Es el poder en potencia, la soberanía que ya no necesita demostrarse, sino que necesita proyectarse.</p>
+      <p>Es la fase de la <strong>Planificación Maximalista</strong>. En el Laboratorio, es el instante en que el diseño del "Santuario Sonoro" está listo en el papel y tú, Pablo, te detienes un segundo antes de clavar el primer clavo, visualizando cómo rebotará el sonido en esas paredes. Es la quietud del estratega que sabe que tiene el fuego (el basto), pero que el fuego necesita un destino para no volverse solo humo.</p>
+
+      <h3>Metáforas de la Geografía del Deseo</h3>
+      <ul>
+        <li><strong>El Globo Terráqueo en la Palma:</strong> El mundo se ha vuelto pequeño porque tu visión se ha vuelto grande. Representa la capacidad de sintetizar la complejidad de la vida en un plan de acción. No eres un náufrago del destino; eres su cartógrafo.</li>
+        <li><strong>La Muralla de la Seguridad:</strong> El creador está protegido por sus logros previos (el muro de piedra). Esa estabilidad es lo que le permite mirar lejos sin miedo a caer. Es la base sólida de la "Investigación del Ser" que permite explorar las sombras más lejanas.</li>
+        <li><strong>El Basto Anclado y el Basto Libre:</strong> Uno sostiene el pasado (lo que ya construiste), el otro es la posibilidad del futuro. El equilibrio entre ambos es lo que evita que el entusiasmo se convierta en imprudencia.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Dos de Bastos es sentir el peso y la gloria de la elección. Es la vibración de quien recibe una propuesta internacional, de quien decide ampliar su escuela a otros territorios, o de quien se detiene a admirar lo logrado antes de dar el siguiente paso gigante. Es la ambición noble: el deseo de que tu fuego ilumine más allá de tus propias fronteras.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es la <strong>Brújula del Realizador</strong>. Nos enseña que antes de correr, hay que saber hacia dónde gira el mundo. Nos pregunta: <em>¿Es tu visión lo suficientemente grande como para contener tu talento? ¿Estás mirando el horizonte o solo tus propios pies?</em> Es la invitación a ser el dueño de tu propia esfera, reconociendo que el mundo es un material moldeable para quien tiene la voluntad de sostenerlo.</p>
+
+      <blockquote>Resonancia: "No te conformes con el jardín que ya floreció; el horizonte es solo una línea que espera ser cruzada por tu voluntad."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
