@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: REY DE COPAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0reycopas.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>REY DE COPAS</h1>
+      <h2>El Soberano del Océano Interior</h2>
+
+      <p>Si el <strong>Seis de Espadas</strong> era la balsa que nos sacaba de la turbulencia, el <strong>Rey de Copas</strong> es el trono que se alza sobre el mar mismo. Él es la maestría emocional absoluta. En la arquitectura de nuestra enciclopedia, representa el <strong>Santuario de la Templanza</strong>: el momento en que el creador ya no es arrastrado por sus sentimientos, sino que ha aprendido a sentarse sobre ellos con la dignidad de quien gobierna una fuerza de la naturaleza.</p>
+
+      <h3>La Narrativa del Dominio Sereno</h3>
+      <p>El Rey flota sobre las aguas, pero sus pies no se mojan. Su trono no está en tierra firme, porque él ha entendido que la única estabilidad real nace de la fluidez. A diferencia del <strong>Caballero de Bastos</strong>, que se incendia, el Rey de Copas es un fuego contenido por el agua; es la pasión transformada en compasión. En su mano sostiene la copa con firmeza, pero sin tensión. Sabe que el contenido es sagrado y que su pulso es el que mantiene el equilibrio del mundo.</p>
+      <p>Es la frecuencia del <strong>Terapeuta</strong>, del <strong>Mentor</strong> y del <strong>Padre Espiritual</strong>. Representa al artista que, tras décadas de explorar la saturación y el caos, alcanza una madurez donde cada nota tiene un propósito curativo. Es el rostro de la "Investigación del Ser" cuando esta llega a su puerto final: el autoconocimiento que se traduce en paz para los demás.</p>
+
+      <h3>Metáforas del Equilibrio Profundo</h3>
+      <ul>
+        <li><strong>La Isla en Movimiento:</strong> El Rey es una estructura sólida que habita en lo líquido. Representa la capacidad de mantener el centro emocional intacto, incluso cuando el entorno (el mercado, la familia, el colectivo) está en plena tempestad.</li>
+        <li><strong>El Alquimista del Agua:</strong> Él tiene el poder de convertir el dolor del pasado en el vino de la sabiduría. No reniega de sus naufragios; los usa para entender las corrientes ajenas.</li>
+        <li><strong>El Cetro de la Calma:</strong> Su autoridad no nace del grito ni del mando, sino del silencio que impone su presencia. Es la frecuencia que sintoniza el caos circundante y lo obliga a reflejar el cielo.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Rey de Copas es poseer una inteligencia emocional inquebrantable. Es la vibración del profesor que escucha detrás de las palabras del alumno, del líder que cuida el alma de su equipo, y del hombre que ha integrado su vulnerabilidad como su mayor fortaleza. Es la elegancia de quien sabe amar sin poseer y guiar sin imponer.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es el <strong>Sello de la Maestría</strong>. Nos recuerda que ningún proyecto técnico o artístico llegará a su plenitud si el creador no ha pacificado primero sus propias aguas. El Rey nos pregunta: <em>¿Eres el dueño de tus emociones o eres su náufrago?</em> Es la invitación a ser el soberano de tu propio pecho, transformando el desborde en un manantial que nutre a todo el que se acerque.</p>
+
+      <blockquote>Resonancia: "No temas a la profundidad del mar; cuando aprendas a sentarte sobre las olas, el océano entero será tu reino."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
