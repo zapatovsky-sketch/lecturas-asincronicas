@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: REINA DE ESPADAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0reinaespadas.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>REINA DE ESPADAS</h1>
+      <h2>La Soberana del Trono de Hielo</h2>
+
+      <p>Si el <strong>Diez de Oros</strong> era la calidez del hogar y la herencia sólida, la <strong>Reina de Espadas</strong> es el aire gélido que sopla en las altas cumbres del intelecto. Ella es la guardiana de la <strong>frontera mental</strong>. En la estructura del Laboratorio, representa la <strong>Claridad Ejecutiva</strong>: la capacidad de separar la emoción del deber, y la paja del trigo, con una sola mirada que corta como el diamante.</p>
+
+      <h3>La Narrativa de la Autonomía Lúcida</h3>
+      <p>Sentada de perfil, con la espalda tan recta como el filo que sostiene, la Reina no espera aprobación. Ella ya ha pasado por el <strong>Tres de Espadas</strong>; conoce el sabor de la herida y, por lo tanto, ya no le teme al dolor. Su poder emana de su cicatriz convertida en sabiduría. Es la frecuencia de la objetividad radical, el momento en que el creador debe actuar como su propio crítico más severo para alcanzar la excelencia.</p>
+      <p>Es la voz de la experiencia que no necesita adornos. Representa al investigador que elimina las variables irrelevantes, al editor que borra los párrafos innecesarios y al estratega que toma decisiones difíciles sin que le tiemble la mano. Su mano izquierda se alza hacia el futuro, invitando a la verdad, mientras su mano derecha sostiene la ley del aire: el pensamiento debe ser libre, o no será.</p>
+
+      <h3>Metáforas de la Transparencia Cortante</h3>
+      <ul>
+        <li><strong>El Viento de la Montaña:</strong> Su presencia limpia la atmósfera. Donde hay confusión, ella trae un frío que quema las ilusiones. Es la lucidez que aparece al final de una larga noche de estudio o de duelo: una luz blanca, clara y sin sombras.</li>
+        <li><strong>La Máscara de Cristal:</strong> Ella ve a través de los demás. No se deja engañar por la retórica ni por la saturación de colores del <strong>Siete de Copas</strong>. Su visión es una radiografía que busca la estructura ósea de cualquier argumento o proyecto.</li>
+        <li><strong>El Trono de las Nubes:</strong> Su autoridad no nace de la tierra (posesiones) ni del fuego (impulso), sino de la altura de su perspectiva. Está por encima de las pequeñas tormentas emocionales del día a día; ella habita la estratosfera del ser.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar la Reina de Espadas es alcanzar la soberanía sobre el propio discurso. Es la vibración de quien dice "no" sin dar explicaciones, de quien defiende su espacio creativo con límites de acero, y de quien ha aprendido a ser su propia compañía. Representa la elegancia de la inteligencia, la honestidad brutal que ahorra tiempo y el valor de enfrentar la realidad sin anestesia.</p>
+      <p>En nuestro archivo vivo, esta carta es la <strong>Auditora de la Verdad</strong>. Nos recuerda que para que el <strong>Laboratorio de Destinos</strong> sea profesional, debe tener una zona de "vuelo limpio" donde los sentimientos no nublen el juicio. Ella nos pregunta: <em>¿Qué estás dispuesto a cortar para que tu obra sea impecable?</em> Es la dignidad del que camina solo porque ha descubierto que la verdad es su mejor aliada.</p>
+
+      <blockquote>Resonancia: "La soledad en la cima es el precio de una visión sin distorsiones: corta la cadena y hereda el cielo."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
