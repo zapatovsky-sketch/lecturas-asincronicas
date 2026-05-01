@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: SEIS DE ESPADAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0seisespadas.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>SEIS DE ESPADAS</h1>
+      <h2>El Pasaje a la Otra Orilla</h2>
+
+      <p>Si el <strong>Ocho de Copas</strong> era el abandono emocional de lo que ya no vibra, el <strong>Seis de Espadas</strong> es el traslado logístico y mental hacia la solución. Es la frecuencia de la <strong>transición asistida</strong>. En nuestra enciclopedia, representa el momento en que el Laboratorio se convierte en una balsa: un vehículo diseñado para sacarnos del agua turbulenta de la crisis y llevarnos hacia el silencio de una nueva comprensión.</p>
+
+      <h3>La Narrativa de la Navegación Mental</h3>
+      <p>Una barca surca aguas que, de un lado, están rizadas por el conflicto y, del otro, se vuelven un espejo de calma absoluta. A bordo, seis espadas están clavadas, no en un cuerpo, sino en la madera de la embarcación. Representan nuestras ideas, nuestras creencias y nuestros aprendizajes: ya no son armas que hieren, sino la carga necesaria que da estabilidad a la balsa. No podemos dejar atrás nuestra historia, pero sí podemos usarla como lastre para no naufragar en el viaje.</p>
+      <p>Es la fase de la <strong>Autogestión del Cambio</strong>. Representa al profesional que, tras un fracaso o una ruptura de estructura, comienza a organizar sus herramientas para un nuevo destino. Es un viaje silencioso, casi ritual, donde el esfuerzo no es físico, sino mental. Es el arte de dejar que la corriente de la vida nos lleve mientras mantenemos el timón firme hacia la claridad.</p>
+
+      <h3>Metáforas del Tránsito Lúcido</h3>
+      <ul>
+        <li><strong>El Puente Flotante:</strong> No hay un camino sólido bajo los pies, pero hay una estructura que flota. Es la confianza en el "proceso" cuando el resultado final todavía no es visible en el horizonte.</li>
+        <li><strong>La Migración de los Conceptos:</strong> Las espadas viajan con nosotros. Es el recordatorio de que no importa a dónde vayas, tu mente es tu único equipaje real. El Seis de Espadas es la mudanza del alma hacia un territorio con menos ruido y más verdad.</li>
+        <li><strong>El Barquero del Pensamiento:</strong> Representa la parte de nosotros que sabe navegar la tristeza. Es la inteligencia que dice: "Ahora no es momento de pelear, es momento de alejarse para entender".</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Seis de Espadas es aceptar que la curación requiere distancia. Es la vibración de quien se muda de ciudad para empezar de cero, de quien inicia un tratamiento o una terapia, o del equipo de trabajo que decide cambiar de metodología para salvar un proyecto. Es el alivio de dejar atrás la tormenta, aunque el destino todavía sea una costa desconocida.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es la <strong>Estrategia del Reposo</strong>. Nos enseña que a veces la mejor acción es la retirada estratégica hacia aguas más profundas. Nos pregunta: <em>¿Qué ideas estás cargando en tu balsa y cuáles estás dejando que se hundan?</em> Es el viaje de la sombra a la luz, del caos a la geometría, de la confusión al silencio donde la voz de la esencia por fin puede ser escuchada.</p>
+
+      <blockquote>Resonancia: "No estás huyendo; estás moviendo el tablero de lugar para poder jugar una partida más noble."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
