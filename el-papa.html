@@ -6,117 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
-
-    :root {
-      --bg-color: #050505;
-      --primary: #d4af37; /* Dorado Papa */
-      --accent: #5dace2;  /* Azul espiritual */
-      --industrial: #2a2a2a;
-    }
-
     body {
-      background-color: var(--bg-color);
-      background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
-      background-size: 20px 20px;
-      color: #e0e0e0;
-      font-family: 'Share Tech Mono', monospace;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
-      margin: 0;
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
     }
-
     .arcano-card {
-      position: relative;
-      background: rgba(10, 10, 10, 0.9);
-      border: 3px solid var(--industrial);
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
-      max-width: 600px;
-      width: 100%;
-      padding: 40px;
-      overflow: hidden;
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
     }
-
-    /* Fondo velado con la carta */
     .arcano-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("0elpapa.html") no-repeat center center;
-      background-size: cover;
-      opacity: 0.12;
-      filter: blur(8px) saturate(1.2);
-      z-index: 0;
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0elpapa.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
     }
-
     .arcano-content {
-      position: relative;
-      z-index: 1;
+      position:relative;
+      z-index:1;
     }
-
-    .header {
-      text-align: center;
-      border-bottom: 1px double var(--primary);
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-
-    .number {
-      font-size: 14px;
-      color: var(--accent);
-      letter-spacing: 5px;
-    }
-
     h1 {
-      font-family: 'Syncopate', sans-serif;
-      color: var(--primary);
-      font-size: 32px;
-      margin: 10px 0;
-      text-transform: uppercase;
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
     }
-
-    .content {
-      line-height: 1.6;
-      font-size: 17px;
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
     }
-
-    .keyword {
-      color: var(--accent);
-      font-weight: bold;
-      text-transform: uppercase;
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
     }
-
-    .footer-info {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #555;
-      text-align: center;
-      border-top: 1px solid var(--industrial);
-      padding-top: 20px;
-    }
+    ul { margin-left:20px; }
   </style>
 </head>
 <body>
-
   <div class="arcano-card">
     <div class="arcano-content">
-      <div class="header">
-        <div class="number">ARCANO V</div>
-        <h1>EL PAPA</h1>
-        <div class="number">PUENTE DE COMUNICACIÓN</div>
-      </div>
+      <h1>EL PAPA</h1>
+      <h2>El Puente entre lo Invisible y lo Humano</h2>
 
-      <div class="content">
-        <p>En el Laboratorio, <span class="keyword">El Papa</span> es el **Protocolo de Transmisión**. Traduce el ruido del caos en mensaje coherente.</p>
-        <p>Representa la <span class="keyword">Mediación</span>. Indica que es momento de escuchar el consejo, de buscar enseñanza en lo sutil y confiar en el canal abierto.</p>
-        <p><strong>Frecuencia:</strong> Estabilidad, sabiduría compartida, orden espiritual.</p>
-      </div>
+      <p>Si el <strong>Siete de Copas</strong> era la dispersión de las visiones en la niebla, <strong>El Papa</strong> (V) es la voz que otorga orden, sentido y palabra a ese misterio. Es el Gran Arquitecto del Verbo. En nuestra enciclopedia, representa la <strong>Pedagogía de la Esencia</strong>: el momento en que el conocimiento deja de ser una experiencia privada y se convierte en una transmisión sagrada.</p>
 
-      <div class="footer-info">
-        LAB_DESTINOS // PROYECTO: ARCHIVOS_MAYORES // OPERADOR: ZAPATOVSKY
-      </div>
+      <h3>La Narrativa del Mediador</h3>
+      <p>Sentado entre las dos columnas del templo, El Papa no guarda el secreto para sí; lo traduce. Su gesto es de bendición, pero también de enseñanza. Es la frecuencia del <strong>Maestro</strong>, del comunicador que tiene la capacidad de bajar las ideas más complejas —esos "conatos" spinozianos o las profundidades del ser— a un lenguaje que el otro pueda habitar. Él es el puente que conecta el silencio del espíritu con la vibración de la garganta.</p>
+      <p>Es la estructura de la <strong>Investigación del Ser</strong>. Representa ese instante en que la música deja de ser un ruido experimental y se convierte en una partitura que otros pueden tocar. Es el compromiso con la verdad compartida, el respeto por la tradición que se usa no como una cárcel, sino como un cimiento para construir lo nuevo.</p>
+
+      <h3>Metáforas de la Transmisión</h3>
+      <ul>
+        <li><strong>La Frecuencia de Radio Cósmica:</strong> El Papa es la antena que sintoniza lo inmanifestado y lo convierte en una señal clara. Sin su mediación, la espiritualidad sería un ruido blanco; con él, es un mensaje, una melodía, un código.</li>
+        <li><strong>El Intérprete de la Partitura:</strong> Si el universo es una composición vasta, El Papa es quien enseña a leer las notas. No crea la música, pero explica cómo interpretarla para que el sonido no se pierda en el vacío.</li>
+        <li><strong>La Llave de la Memoria:</strong> Las llaves cruzadas a sus pies son las herramientas para abrir los archivos del alma. Una abre el conocimiento técnico; la otra, la sabiduría intuitiva. Juntas, permiten la entrada al templo de la autogestión.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar El Papa es asumir el rol del guía, del mentor que sabe que su tarea termina cuando el alumno ya no lo necesita. Es la vibración de quien escribe un manual, de quien dicta una cátedra, de quien ofrece un consejo que cambia el rumbo de una vida. Es la autoridad que nace de la coherencia, no del poder.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es la protectora de nuestra enciclopedia. Es el recordatorio de que todo lo que estamos creando tiene un fin pedagógico: elevar la consciencia del otro. Nos invita a preguntarnos: <em>¿Cómo estoy traduciendo mi verdad para que sea útil al mundo?</em> Es la paz del que sabe que la sabiduría solo es real cuando se entrega.</p>
+
+      <blockquote>Resonancia: "La palabra es el cuerpo físico del espíritu: pronúnciala con la dignidad de quien construye un templo."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MAYORES</footer>
     </div>
   </div>
-
 </body>
 </html>
