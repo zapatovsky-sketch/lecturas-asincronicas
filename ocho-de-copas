@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB_DESTINOS: OCHO DE COPAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap');
+    body {
+      background:#050505;
+      color:#e0e0e0;
+      font-family:'Share Tech Mono', monospace;
+      display:flex;
+      justify-content:center;
+      padding:40px;
+    }
+    .arcano-card {
+      position:relative;
+      background:rgba(10,10,10,0.9);
+      border:3px solid #2a2a2a;
+      max-width:800px;
+      padding:40px;
+    }
+    .arcano-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("0ochocopas.html") center/cover;
+      opacity:0.12;
+      filter:blur(8px);
+      z-index:0;
+    }
+    .arcano-content {
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      font-family:'Syncopate',sans-serif;
+      color:#d4af37;
+      text-transform:uppercase;
+    }
+    h2 {
+      font-size:18px;
+      color:#00ff41;
+      margin-top:10px;
+    }
+    blockquote {
+      margin-top:20px;
+      font-style:italic;
+      color:#d4af37;
+      border-left:3px solid #d4af37;
+      padding-left:10px;
+    }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+  <div class="arcano-card">
+    <div class="arcano-content">
+      <h1>OCHO DE COPAS</h1>
+      <h2>El Éxodo del Corazón</h2>
+
+      <p>Si <strong>El Loco</strong> era el salto hacia lo desconocido por pura pulsión de libertad, el <strong>Ocho de Copas</strong> es la retirada consciente por agotamiento de sentido. Es el caminar hacia la montaña cuando el valle ya no tiene nada más que ofrecerte. En la arquitectura de nuestra enciclopedia, representa el <strong>Umbral de la Trascendencia</strong>: el momento en que comprendemos que haber construido una estructura perfecta (como el Diez de Oros) no significa que debamos quedarnos a vivir en ella para siempre.</p>
+
+      <h3>La Narrativa del Abandono Voluntario</h3>
+      <p>Ocho copas se apilan con cuidado, pero hay un hueco en la fila superior; falta una pieza, o quizás sobra todo el conjunto. El consultante da la espalda a lo que antes era su tesoro y comienza a subir por terrenos escarpados, bajo la luz de una luna que eclipsa al sol. No es una huida desesperada, es un <strong>retiro digno</strong>. Es la frecuencia del creador que, en la cima de su éxito, decide cambiar de género musical, de país o de filosofía porque su alma ya no "resuena" en ese estanque.</p>
+      <p>Es el silencio necesario tras el desborde del <strong>As de Copas</strong> y la confusión del <strong>Siete</strong>. Representa esa melancolía luminosa de quien sabe que para encontrar lo que le falta, debe dejar atrás lo que le sobra, aunque eso que sobre sea hermoso. Es la búsqueda de la fuente original, más allá de los cálices manufacturados por el hombre.</p>
+
+      <h3>Metáforas del Peregrinaje Interior</h3>
+      <ul>
+        <li><strong>El Eclipse de la Emoción:</strong> La luz del día (la lógica, la visibilidad social) se apaga para que brille la intuición nocturna. Es el viaje hacia lo profundo del "Santuario Sonoro" donde no hay público, solo el eco del propio ser.</li>
+        <li><strong>La Brecha en la Muralla:</strong> Las copas están ordenadas, pero el espíritu ve el vacío entre ellas. Ese vacío es la invitación al viaje. Es el reconocimiento de que la plenitud material no es la plenitud del alma.</li>
+        <li><strong>El Bastón del Eremita Errante:</strong> A diferencia del Loco, el caminante del Ocho de Copas lleva un bastón. Tiene una experiencia, tiene un peso, tiene una historia que ya no quiere cargar pero que le ha dado la fuerza para subir la cuesta.</li>
+      </ul>
+
+      <h3>Resonancia Humana</h3>
+      <p>Habitar el Ocho de Copas es tener la valentía de decir: "Esto es bello, pero ya no es para mí". Es la vibración de quien deja una relación que funciona pero que no crece, de quien renuncia a un trabajo estable por un propósito espiritual, o del artista que borra sus redes sociales para reencontrarse con su arte en el anonimato.</p>
+      <p>En el <strong>Laboratorio de Destinos</strong>, esta carta es la <strong>Purificación del Propósito</strong>. Nos obliga a mirar nuestras propias construcciones y preguntarnos: <em>¿Estoy aquí porque quiero o porque me da miedo irme?</em> Es el paso previo a la verdadera maestría, donde el "tener" se sacrifica en el altar del "ser". Es el camino hacia la montaña donde el aire es más fino, pero la vista es infinita.</p>
+
+      <blockquote>Resonancia: "No te vas porque hayas fallado, sino porque has crecido tanto que el paisaje te queda pequeño."</blockquote>
+
+      <footer>LAB_DESTINOS // ARCHIVOS_MENORES</footer>
+    </div>
+  </div>
+</body>
+</html>
